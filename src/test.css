@@ -2,11 +2,53 @@
 {
     background-color: purple;
     display:flex;
-    flex-direction: rows;
-
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .noteControl
 {
+    background-color: red;
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.noteEdit{
+   background-color:blue;
+   display:flex;
+   flex-direction: column;
+   flex: 2 3 auto;
+
+}
+
+.noteControl__bar{
+   background-color:orange;
+   width: 100%;
+   height: 100%;
+
+}
+
+.noteControl__notesInfo{
+   background-color:green;
+   width: 100%;
+   height: 100%;
     
 }
+
+.noteEdit__bar{
+   background-color:pink;
+   width: 100%;
+   height: 100vh;
+
+}
+
+.noteEdit__notes{
+   background-color:black;
+   width: 100%;
+   height: 100vh;
+}
+
+
