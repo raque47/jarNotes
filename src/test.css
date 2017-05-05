@@ -1,0 +1,12 @@
+.content 
+{
+    background-color: purple;
+    display:flex;
+    flex-direction: rows;
+
+}
+
+.noteControl
+{
+    
+}
