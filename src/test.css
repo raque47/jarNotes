@@ -27,7 +27,7 @@
 .noteControl__bar{
    background-color:orange;
    width: 100%;
-   height: 100%;
+   height: 10%;
 
 }
 
@@ -41,7 +41,7 @@
 .noteEdit__bar{
    background-color:pink;
    width: 100%;
-   height: 100vh;
+   height: 10vh;
 
 }
 
