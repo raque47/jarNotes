@@ -9,7 +9,7 @@
     "sass": "node-sass ./src/scss/main.scss --include-path ./src/scss/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mauricio Poveda",
+  "author": "Larissa Arroyo Castillo - Raquel Chavarria Robles",
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7"
