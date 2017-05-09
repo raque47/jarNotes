@@ -12,6 +12,7 @@
   "author": "Larissa Arroyo Castillo - Raquel Chavarria Robles",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {

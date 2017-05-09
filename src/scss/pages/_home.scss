@@ -3,8 +3,39 @@
   background-color: $brand-color;
 }
 
-.noteControl__button--notesActions
+.navBar__button
 {
-  width: 2rem;
-  height: 3rem;
+  background-image: url("../images/notes-button.svg");
+  background-color: transparent;
+  border: none;
+}
+
+.navBar__images
+{
+    width: 5rem;
+    height: 7rem;
+}
+
+
+.navbar .container-fluid>.navbar-header {
+  float: left;
+  margin-right: 10px;
+}
+.navbar .navbar-nav {
+  float: left;
+  margin: 5px;
+}
+.nav>li {
+  float: left;
+}
+
+
+.body{
+    margin: 0;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #FAFAFA;
 }
