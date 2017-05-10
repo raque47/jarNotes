@@ -5845,8 +5845,7 @@ button.close {
 
 .container-fluid {
   padding-left: 0;
-  padding-right: 0;
-  background-color: #FAFAFA; }
+  padding-right: 0; }
 
 .editionBar__nav {
   background-color: #EEE8E7;
@@ -5860,8 +5859,8 @@ button.close {
   display: block;
   padding: 1rem 2rem 1rem 2rem; }
 
-.editionBar__button:hover {
-  background-color: #F5A9D0; }
+.buttons:hover {
+  background-color: #F6CED8; }
 
 .editionBar__button:focus {
   border: none;
@@ -5872,3 +5871,27 @@ button.close {
 
 .editionBar__button:last-child {
   padding-bottom: 1rem; }
+
+.hiddenButtons__button {
+  padding: 1rem;
+  display: block; }
+
+.hiddenButtons {
+  background-color: #EEE8E7;
+  width: 9%;
+  opacity: 0.2;
+  transition: opacity 1s; }
+
+.buttonFont {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 1.5rem;
+  margin-left: 1.9rem; }
+
+.hiddenButtonsNotes {
+  visibility: hidden; }
+
+.hiddenButtonsTag {
+  visibility: hidden; }
+
+.hiddenButtonsFolder {
+  visibility: hidden; }
