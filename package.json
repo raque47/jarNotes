@@ -6,14 +6,15 @@
   "scripts": {
     "server": "http-server ./dist",
     "presass": "cp ./src/index.html ./dist/",
-    "sass": "node-sass ./src/scss/main.scss --include-path ./src/scss/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/",
+    "sass": "node-sass ./src/scss/main.scss --include-path ./src/scss/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/  && cp -r ./node_modules/bootstrap-sass/assets/javascripts/ ./dist/js/ && cp ./node_modules/jquery/dist/jquery.min.js ./dist/jquery",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Larissa Arroyo Castillo - Raquel Chavarria Robles",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "node-sass": "^4.5.2"
