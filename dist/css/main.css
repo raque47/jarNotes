@@ -5821,14 +5821,13 @@ button.close {
 .home {
   background-color: #3fbd01; }
 
-.navBar__button {
-  background-image: url("../images/notes-button.svg");
+.buttons {
   background-color: transparent;
   border: none; }
 
 .navBar__images {
-  width: 5rem;
-  height: 7rem; }
+  width: 2.5rem;
+  height: 4.5rem; }
 
 .navbar .container-fluid > .navbar-header {
   float: left;
@@ -5848,3 +5847,28 @@ button.close {
   padding-left: 0;
   padding-right: 0;
   background-color: #FAFAFA; }
+
+.editionBar__nav {
+  background-color: #EEE8E7;
+  position: absolute;
+  display: block;
+  position: fixed;
+  top: 35%;
+  margin-left: 2rem; }
+
+.editionBar__button {
+  display: block;
+  padding: 1rem 2rem 1rem 2rem; }
+
+.editionBar__button:hover {
+  background-color: #F5A9D0; }
+
+.editionBar__button:focus {
+  border: none;
+  outline: none; }
+
+.editionBar__button:first-child {
+  padding-top: 1rem; }
+
+.editionBar__button:last-child {
+  padding-bottom: 1rem; }
