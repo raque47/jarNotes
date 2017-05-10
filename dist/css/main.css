@@ -5829,6 +5829,10 @@ button.close {
   width: 2.5rem;
   height: 4.5rem; }
 
+.navBar__hiddenImages {
+  width: 1.5rem;
+  height: 3.5rem; }
+
 .navbar .container-fluid > .navbar-header {
   float: left;
   margin-right: 10px; }
@@ -5849,12 +5853,12 @@ button.close {
   padding-right: 0; }
 
 .editionBar__nav {
-  background-color: #EEE8E7;
+  background-color: #F8F8F8;
+  border: 0.2rem solid #E7E7E7;
   position: absolute;
   display: block;
   position: fixed;
-  top: 35%;
-  margin-left: 2rem; }
+  z-index: 2; }
 
 .editionBar__button {
   display: block;
@@ -5874,46 +5878,57 @@ button.close {
   padding-bottom: 1rem; }
 
 .hiddenButtons__button {
-  padding: 1rem 1rem 1rem 1.5rem;
-  display: block;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  width: 16.3333rem; }
+  display: inline-block;
+  align-content: center; }
 
 .hiddenButtons {
-  background-color: #EEE8E7;
-  width: 17%;
+  background-color: #F8F8F8;
   opacity: 0.2;
-  transition: opacity 1s;
-  position: absolute;
-  top: -2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: center;
-  width: 16.3333rem; }
+  visibility: hidden;
+  display: none;
+  height: 5vh;
+  transition: opacity 1s; }
 
 .buttonFont {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 1.5rem;
-  margin-left: 1.9rem;
+  margin-left: 1.5rem;
   height: 4.5rem;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  padding-right: 0; }
 
+<<<<<<< HEAD
 .hiddenButtonsNotes {
   visibility: hidden;
   left: -19.5rem; }
+=======
+.buttonFontHidden {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 1.1rem; }
+>>>>>>> 65fefd00beb3396ee2048309c63f69785a36a229
 
-.hiddenButtonsTag {
+.editionBar__span {
   visibility: hidden;
-  left: -17rem; }
+  opacity: 0;
+  transition: opacity 1s; }
 
-.hiddenButtonsFolder {
-  visibility: hidden;
-  left: -12rem; }
+.hiddenControl {
+  display: none; }
+
+.activeControl {
+  display: inline-block; }
 
 .navBar__button {
+<<<<<<< HEAD
   height: 5rem;
   padding: 0rem 2rem 0rem 2rem; }
+=======
+  width: 3rem;
+  padding-bottom: 0;
+  height: 5rem; }
+
+.infoPanel {
+  background-color: transparent;
+  height: 90vh;
+  border: 0.2rem solid #DDD; }
+>>>>>>> 65fefd00beb3396ee2048309c63f69785a36a229

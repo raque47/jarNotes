@@ -15,6 +15,12 @@
     height: 4.5rem;
 }
 
+.navBar__hiddenImages
+{
+    width: 1.5rem;
+    height: 3.5rem;
+}
+
 
 .navbar .container-fluid>.navbar-header {
   float: left;
@@ -44,12 +50,16 @@
 
 .editionBar__nav
 {
-  background-color: #EEE8E7;
+  background-color: #F8F8F8;
+  border: 0.2rem solid #E7E7E7;
   position:absolute;
   display: block;
   position: fixed;
-  top: 35%;
-  margin-left: 2rem;
+  //top: 35%;
+  //margin-left: 2rem;
+  z-index: 2;
+ 
+ // width: 10rem;
 }
 
 .editionBar__button
@@ -84,72 +94,69 @@
  }
 
 .hiddenButtons__button{
-    
-    padding: 1rem 1rem 1rem 1.5rem;   
-    display: block;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    //padding: 1rem 1rem 1rem 1.5rem;   
+    display: inline-block;
     align-content: center;
-    width: 16.3333rem;
 }
 
 .hiddenButtons
 {
-    background-color: #EEE8E7;
-    width:17%;
+
+   background-color: #F8F8F8;
+
+   // width:17%;
     opacity: 0.2;
+    visibility: hidden;
+    display: none;
+    height: 5vh;
     transition: opacity 1s;
-    position: absolute;
-    top: -2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    width: 16.3333rem;
 }
 
-//  -webkit-order: 0;
-//    -ms-flex-order: 0;
-//    order: 0;
-//    -webkit-flex: 0 1 auto;
-//    -ms-flex: 0 1 auto;
-//    flex: 0 1 auto;
-//    -webkit-align-self: auto;
-//    -ms-flex-item-align: auto;
-//    align-self: auto;
-    
 .buttonFont{
    font-family: 'Love Ya Like A Sister', cursive;
    font-size: 1.5rem;
-   margin-left: 1.9rem;
+   margin-left: 1.5rem;
    height: 4.5rem;
    padding-top: 1rem;
+   padding-right: 0;
 }
 
-.hiddenButtonsNotes{
-    
+.buttonFontHidden
+{
+     font-family: 'Love Ya Like A Sister', cursive;
+     font-size: 1.1rem;
+}
+
+
+.editionBar__span
+{
     visibility: hidden;
-    left: -19.5rem;
+    opacity: 0;
+    transition: opacity 1s;  
 }
 
-
-.hiddenButtonsTag{
-    
-    visibility: hidden;
-    left: -17rem;
+.hiddenControl
+{
+  display:none;
 }
 
-.hiddenButtonsFolder{
-    
-    visibility: hidden;
-    left: -12rem;
+.activeControl
+{
+  display:inline-block;
 }
-
 
 .navBar__button{
     width: 3rem;
     padding-bottom: 0;
     height: 5rem;
 }
+
+.infoPanel
+{
+    background-color: transparent;
+    height: 90vh;
+    border: 0.2rem solid #DDD ;
+}
+
+
 
