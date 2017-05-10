@@ -2,18 +2,22 @@ var notesButton = document.getElementById('notesControl');
 var hiddenNotesButton = document.getElementById('hiddenControlNotesButtons');                               
 var eventNotesButton = notesButton.addEventListener('click', function () {toggleControls(hiddenNotesButton) });
 notesButton.addEventListener('mouseover', function () {toggleControls(hiddenNotesButton) });
+notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
+
 
 
 var tagButton = document.getElementById('tagsControl');
 var hiddenTagsButton = document.getElementById('hiddenControlTagsButtons');       
 var eventTagsButton = tagButton.addEventListener('click', function () { toggleControls(hiddenTagsButton) });
 tagButton.addEventListener('mouseover', function () { toggleControls(hiddenTagsButton) });
+notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
 
 
 var folderButton = document.getElementById('foldersControl');
 var hiddenFoldersButton = document.getElementById('hiddenControlFoldersButtons');       
 var eventFoldersButton = folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton)});
 folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton)});
+notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
 
 
 
@@ -33,6 +37,7 @@ function toggleControls(controlComponent) {
     
 }
 
+
 function resetControls(){
     hiddenNotesButton.style.visibility = 'hidden';
     hiddenNotesButton.style.opacity = 0.2;
@@ -44,3 +49,14 @@ function resetControls(){
     hiddenFoldersButton.style.opacity = 0.2;
     
 }
+
+function changeColor(controlComponent) {
+    resetColor();
+    console.log(controlComponent);
+    controlComponent.style.backgroundColor = '#F6CED8';
+}
+
+
+
+
+ 

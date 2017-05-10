@@ -5904,7 +5904,7 @@ button.close {
 
 .hiddenButtonsNotes {
   visibility: hidden;
-  left: -20rem; }
+  left: -19.5rem; }
 
 .hiddenButtonsTag {
   visibility: hidden;
@@ -5915,4 +5915,5 @@ button.close {
   left: -12rem; }
 
 .navBar__button {
-  width: 3rem; }
+  height: 5rem;
+  padding: 0rem 2rem 0rem 2rem; }
