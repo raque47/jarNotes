@@ -5895,3 +5895,14 @@ button.close {
 
 .hiddenButtonsFolder {
   visibility: hidden; }
+
+.editionBar__span {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s; }
+
+.hiddenControl {
+  display: none; }
+
+.activeControl {
+  display: inline; }
