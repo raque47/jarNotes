@@ -15,6 +15,12 @@
     height: 4.5rem;
 }
 
+.navBar__hiddenImages
+{
+    width: 1.5rem;
+    height: 3.5rem;
+}
+
 
 .navbar .container-fluid>.navbar-header {
   float: left;
@@ -22,8 +28,12 @@
 }
 .navbar .navbar-nav {
   float: left;
-  margin: 5px;
+  margin: 0;
+  /* width: 2rem; */
+
 }
+
+
 .nav>li {
   float: left;
 }
@@ -41,12 +51,15 @@
 
 .editionBar__nav
 {
-  background-color: #EEE8E7;
+  background-color: #F8F8F8;
+  border: 0.2rem solid #E7E7E7;
   position:absolute;
   display: block;
   position: fixed;
-  top: 35%;
-  margin-left: 2rem;
+  //top: 35%;
+  //margin-left: 2rem;
+  z-index: 2;
+ 
  // width: 10rem;
 }
 
@@ -81,40 +94,39 @@
  }
 
 .hiddenButtons__button{
-    
-    padding: 1rem;  
-    display: block;
+    //padding: 1rem 1rem 1rem 1.5rem;   
+    display: inline-block;
+    align-content: center;
 }
 
 .hiddenButtons
 {
-    background-color: #EEE8E7;
-    width:9%;
+
+   background-color: #F8F8F8;
+
+   // width:17%;
     opacity: 0.2;
+    visibility: hidden;
+    display: none;
+    height: 5vh;
     transition: opacity 1s;
 }
 
 .buttonFont{
    font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 1.5rem;
-    margin-left: 1.9rem;
+   font-size: 1.5rem;
+   margin-left: 1.5rem;
+   height: 4.5rem;
+   padding-top: 1rem;
+   padding-right: 0;
 }
 
-.hiddenButtonsNotes{
-    
-    visibility: hidden;
+.buttonFontHidden
+{
+     font-family: 'Love Ya Like A Sister', cursive;
+     font-size: 1.1rem;
 }
 
-
-.hiddenButtonsTag{
-    
-    visibility: hidden;
-}
-
-.hiddenButtonsFolder{
-    
-    visibility: hidden;
-}
 
 .editionBar__span
 {
@@ -130,10 +142,21 @@
 
 .activeControl
 {
-  display:inline;
+  display:inline-block;
 }
 
+.navBar__button{
+    width: 3rem;
+    padding-bottom: 0;
+    height: 5rem;
+}
 
+.infoPanel
+{
+    background-color: transparent;
+    height: 90vh;
+    border: 0.2rem solid #DDD ;
+}
 
 
 
