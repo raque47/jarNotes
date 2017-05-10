@@ -5835,7 +5835,8 @@ button.close {
 
 .navbar .navbar-nav {
   float: left;
-  margin: 5px; }
+  margin: 0;
+  /* width: 2rem; */ }
 
 .nav > li {
   float: left; }
@@ -5873,25 +5874,45 @@ button.close {
   padding-bottom: 1rem; }
 
 .hiddenButtons__button {
-  padding: 1rem;
-  display: block; }
+  padding: 1rem 1rem 1rem 1.5rem;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  width: 16.3333rem; }
 
 .hiddenButtons {
   background-color: #EEE8E7;
-  width: 9%;
+  width: 17%;
   opacity: 0.2;
-  transition: opacity 1s; }
+  transition: opacity 1s;
+  position: absolute;
+  top: -2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  width: 16.3333rem; }
 
 .buttonFont {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 1.5rem;
-  margin-left: 1.9rem; }
+  margin-left: 1.9rem;
+  height: 4.5rem;
+  padding-top: 1rem; }
 
 .hiddenButtonsNotes {
-  visibility: hidden; }
+  visibility: hidden;
+  left: -20rem; }
 
 .hiddenButtonsTag {
-  visibility: hidden; }
+  visibility: hidden;
+  left: -17rem; }
 
 .hiddenButtonsFolder {
-  visibility: hidden; }
+  visibility: hidden;
+  left: -12rem; }
+
+.navBar__button {
+  width: 3rem; }
