@@ -32,8 +32,6 @@ titleNote.addEventListener("keyup", function(event) {
 });
 
 function setSearchFormVisible(controlComponent1, controlComponent2 ) {
-    //resetVisible();
-    console.log('ENTRE');
     controlComponent1.classList.remove('searchFormHidden');
     controlComponent1.classList.add('searchFormVisible');
     controlComponent2.classList.remove('searchFormHidden');
@@ -154,24 +152,24 @@ function toggleEditionBar() {
     }
 }
 
-function setTitleNote(controlComponent)
-{
+function setTitleNote(controlComponent) {
    controlComponent.classList.add('increaseSizeNoteTitle');
    var textBoxNote = document.getElementById('noteContent');
    textBoxNote.focus();
 }
 
-function addNote()
-{
-    var noteText = document.getElementById('noteContent');
-    var panelNoteInfo = document.getElementById('collapseOne');
-    panelNoteInfo.innerHTML= noteText.value; //PREGUNTAR MAURICIO
-    
-    noteText.value = "";
+function addNote() {
+
+    console.log('NOOOTAASS');
+  /*  var noteTextBox = document.getElementById('noteContent');
+    var noteText = noteTextBox.value;
+
+    document.querySelector('.panel-body').innerHTML = noteText;
+    noteTextBox.value = '';
 
     var panelTitle = document.getElementById('panel1Title');
     var title = document.getElementById('titleNote');
 
     panelTitle.innerHTML = title.value;
-    title.value = "";
+    title.value = ""; */
 }
