@@ -5965,14 +5965,19 @@ button.close {
   top: -7rem;
   left: -2.8rem; }
 
-.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse > .list-group {
   border-top: 1px solid #ddd;
   font-family: -webkit-pictograph;
   justify-content: center;
   justify-items: inherit;
   text-align: justify; }
 
-.panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a {
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
   font-family: -webkit-pictograph; }
 
 .panel-group {
@@ -6061,6 +6066,7 @@ button.close {
   border-color: #ccc;
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px #f2bc86; }
 
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
   background-color: #F6CED8;
   height: 3.4rem; }

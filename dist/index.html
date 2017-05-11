@@ -92,8 +92,9 @@
                     <div class="editionNotesControl">
                         <button class="editionButtonControls"><img src="../images/paint-button.svg" class="navBar__images"></button>
                         <button class="editionButtonControls"><img src="../images/upload-button.svg" class="navBar__images"></button>
-                        <button class="btn btn-primary editionButtonControls"><span class="editionTextControl">Add Note</span></button>
-
+                        <form action="" onsubmit="return addNote()">
+                            <button type "submit" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
+                        </form>
 
                     </div>
                 </div>
@@ -130,7 +131,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a id="panel1Title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Nota 1
         </a>
       </h4>
