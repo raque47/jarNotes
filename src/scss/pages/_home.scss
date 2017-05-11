@@ -1,10 +1,12 @@
+$font-stack: 'Love Ya Like A Sister', cursive;
+
+
 // Home specific styles
 .home {
     background-color: $brand-color;
 }
-.fontFamily {
-    font-family: 'Love Ya Like A Sister', cursive;
-}
+
+
 .root {
     font-size: 16px;
 }
@@ -27,7 +29,6 @@
 .navbar .navbar-nav {
     float: left;
     margin: 0;
-    /* width: 2rem; */
 }
 .nav>li {
     float: left;
@@ -35,26 +36,23 @@
 .body {
     margin: 0;
 }
+
+.fontFamily {
+    font-family:$font-stack;
+}
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
-    //    background-color: #FAFAFA;
 }
 .editionBar__nav {
     background-color: #F8F8F8;
     border: 0.2rem solid #E7E7E7;
     display: block;
-    //top: 35%;
-    //margin-left: 2rem;
-    // position: absolute;
-    // z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 90vh;
-    // 
-    // width: 10rem;
 }
 .edition {
     display: flex;
@@ -83,7 +81,6 @@
 }
 .disableHiddenButton {
     background-color: #F8F8F8;
-    // background-color: green;
 }
 .editionBar__button:focus {
     border: none;
@@ -111,15 +108,14 @@
     text-align: center;
 }
 .buttonFont {
-    font-family: 'Love Ya Like A Sister', cursive;
+    font-family: $font-stack;
     font-size: 0.9em;
-    //margin-left: 1.5rem;
     height: 4.5rem;
     padding-top: 1rem;
     padding-right: 0;
 }
 .buttonFontHidden {
-    font-family: 'Love Ya Like A Sister', cursive;
+    font-family:  $font-stack;
     font-size: 0.8em;
     margin-left: 0rem;
 }
@@ -151,6 +147,7 @@
     padding: 0px;
     /* firefox bug fix */
 }
+
 .navbar-brand>img {
     height: 40rem;
     padding: 15px;
@@ -195,11 +192,9 @@
 .titleNoteControl {
     border: none;
     outline: none;
-    // background-color: #F8F8F8 ;
     color: #FF7138;
-    font-family: 'Love Ya Like A Sister', cursive;
+    font-family:  $font-stack;
     font-size: 1.8rem;
-    //overflow: auto;
 }
 .noteText {
     display: flex;
@@ -208,9 +203,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: stretch;
-    //  background-color:  #F8F8F8 ;
     border-radius: 0.7rem;
-    //  border: 0.2rem solid #DDD ; 
 }
 .titleNoteControl:hover {
     border: none;
@@ -229,12 +222,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    //  justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
-    //  background-color:yellow;
     padding: 0.2rem;
-    //  background-color:  #F8F8F8 ;
     border-radius: 0.7rem;
 }
 .editionButtonControls {
@@ -250,7 +240,6 @@
     padding: 6px 12px;
     margin-bottom: 30px;
     border: none;
-    // border: 2px solid  #FF7138 ;
     border-radius: 4px;
     background-color: transparent;
     width: auto;
@@ -261,11 +250,11 @@
     background-color: #F5A9D0;
     color: #FF7138;
     border: none;
-    //  border: 2px solid  #FF7138 ;
+
 }
 .editionTextControl {
     font-size: 1.4rem;
-    font-family: 'Love Ya Like A Sister', cursive;
+    font-family:  $font-stack;
 }
 .form-control:focus {
     border-color: #ccc;
@@ -275,4 +264,11 @@
 .input-group-btn:last-child > .btn-group {
     background-color: #F6CED8;
     height: 3.4rem;
+}
+
+
+.searchButtonInformationPanel {
+    width: 1.5rem;
+    height: 3.5rem;
+    padding-bottom: 1.5rem;
 }

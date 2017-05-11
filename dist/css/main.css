@@ -5821,9 +5821,6 @@ button.close {
 .home {
   background-color: #3fbd01; }
 
-.fontFamily {
-  font-family: 'Love Ya Like A Sister', cursive; }
-
 .root {
   font-size: 16px; }
 
@@ -5845,14 +5842,16 @@ button.close {
 
 .navbar .navbar-nav {
   float: left;
-  margin: 0;
-  /* width: 2rem; */ }
+  margin: 0; }
 
 .nav > li {
   float: left; }
 
 .body {
   margin: 0; }
+
+.fontFamily {
+  font-family: "Love Ya Like A Sister", cursive; }
 
 .container-fluid {
   padding-left: 0;
@@ -5918,14 +5917,14 @@ button.close {
   text-align: center; }
 
 .buttonFont {
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   font-size: 0.9em;
   height: 4.5rem;
   padding-top: 1rem;
   padding-right: 0; }
 
 .buttonFontHidden {
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   font-size: 0.8em;
   margin-left: 0rem; }
 
@@ -6000,7 +5999,7 @@ button.close {
   border: none;
   outline: none;
   color: #FF7138;
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   font-size: 1.8rem; }
 
 .noteText {
@@ -6060,7 +6059,7 @@ button.close {
 
 .editionTextControl {
   font-size: 1.4rem;
-  font-family: 'Love Ya Like A Sister', cursive; }
+  font-family: "Love Ya Like A Sister", cursive; }
 
 .form-control:focus {
   border-color: #ccc;
@@ -6070,3 +6069,8 @@ button.close {
 .input-group-btn:last-child > .btn-group {
   background-color: #F6CED8;
   height: 3.4rem; }
+
+.searchButtonInformationPanel {
+  width: 1.5rem;
+  height: 3.5rem;
+  padding-bottom: 1.5rem; }

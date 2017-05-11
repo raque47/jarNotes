@@ -24,7 +24,6 @@ hiddenButtonSearchNote.addEventListener('click', function(){  setSearchFormVisib
 
 
 var titleNote = document.getElementById('titleNote');
-//titleNote.addEventListener('click', function(){increaseFontSize(titleNote)});
 titleNote.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 13) {
@@ -76,16 +75,13 @@ function resetColorMenuButtons() {
 function resetColorHiddenButtons() {
     var hiddenButtons = document.getElementsByClassName('hiddenButtons__button');
     for (var i = 0; i < hiddenButtons.length; ++i) {
-        console.log('contenido es: ' + hiddenButtons[i]);
-
        hiddenButtons[i].classList.remove('activeHiddenButton');
-    hiddenButtons[i].classList.add('disableHiddenButton');
+        hiddenButtons[i].classList.add('disableHiddenButton');
     }
 }
 
 function toggleControls(controlComponent) {
     resetControls();
-    // console.log(controlComponent);
     if (controlComponent.style.visibility == 'hidden') {
         controlComponent.style.visibility = 'visible';
         controlComponent.style.opacity = 1;
@@ -170,7 +166,7 @@ function addNote()
     var noteText = document.getElementById('noteContent');
     var panelNoteInfo = document.getElementById('collapseOne');
     panelNoteInfo.innerHTML= noteText.value; //PREGUNTAR MAURICIO
-
+    
     noteText.value = "";
 
     var panelTitle = document.getElementById('panel1Title');
