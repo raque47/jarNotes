@@ -5821,13 +5821,16 @@ button.close {
 .home {
   background-color: #3fbd01; }
 
+.root {
+  font-size: 16px; }
+
 .buttons {
   background-color: transparent;
   border: none; }
 
 .navBar__images {
-  width: 2.5rem;
-  height: 4.5rem; }
+  width: 2vw;
+  height: 4vh; }
 
 .navBar__hiddenImages {
   width: 1.5rem;
@@ -5856,9 +5859,17 @@ button.close {
   background-color: #F8F8F8;
   border: 0.2rem solid #E7E7E7;
   display: block;
-  position: fixed;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 90vh; }
+
+.edition {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
 
 .editionBar__button {
   display: block;
@@ -5866,6 +5877,19 @@ button.close {
 
 .buttons:hover {
   background-color: #F6CED8; }
+
+.buttons:focus {
+  border: none;
+  outline: none;
+  background-color: #F5A9D0; }
+
+.activeHiddenButton {
+  background-color: #F5A9D0;
+  border: none;
+  outline: none; }
+
+.disableHiddenButton {
+  background-color: #F8F8F8; }
 
 .editionBar__button:focus {
   border: none;
@@ -5887,23 +5911,24 @@ button.close {
   visibility: hidden;
   display: none;
   height: 5vh;
-  transition: opacity 1s; }
+  transition: opacity 1s;
+  text-align: center; }
 
 .buttonFont {
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
+  font-size: 0.9em;
   height: 4.5rem;
   padding-top: 1rem;
   padding-right: 0; }
 
 .buttonFontHidden {
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 1.1rem; }
+  font-size: 0.8em;
+  margin-left: 0rem; }
 
 .editionBar__span {
   visibility: hidden;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s; }
 
 .hiddenControl {
@@ -5913,11 +5938,35 @@ button.close {
   display: inline-block; }
 
 .navBar__button {
-  width: 3rem;
+  width: 4vw;
   padding-bottom: 0;
   height: 5rem; }
+
+.navBar__button:last-child {
+  margin-left: 2rem; }
 
 .infoPanel {
   background-color: transparent;
   height: 90vh;
   border: 0.2rem solid #DDD; }
+
+.navbar-brand {
+  padding: 0px;
+  /* firefox bug fix */ }
+
+.navbar-brand > img {
+  height: 40rem;
+  padding: 15px;
+  /* firefox bug fix */
+  width: 55rem;
+  position: absolute;
+  top: -7rem;
+  left: -2.8rem; }
+
+.noteText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: #F8F8F8;
+  border-radius: 0.7rem; }
