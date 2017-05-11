@@ -1,149 +1,108 @@
 // Home specific styles
 .home {
-  background-color: $brand-color;
+    background-color: $brand-color;
 }
-
-.root
-{
+.fontFamily {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+.root {
     font-size: 16px;
 }
-.buttons
-{
-  background-color: transparent;
-  border: none;
+.buttons {
+    background-color: transparent;
+    border: none;
 }
-
-.navBar__images
-{
+.navBar__images {
     width: 2vw;
     height: 4vh;
 }
-
-.navBar__hiddenImages
-{
+.navBar__hiddenImages {
     width: 1.5rem;
     height: 3.5rem;
 }
-
-
 .navbar .container-fluid>.navbar-header {
-  float: left;
-  margin-right: 10px;
+    float: left;
+    margin-right: 10px;
 }
 .navbar .navbar-nav {
-  float: left;
-  margin: 0;
-  /* width: 2rem; */
+    float: left;
+    margin: 0;
+    /* width: 2rem; */
 }
-
-
 .nav>li {
-  float: left;
+    float: left;
 }
-
-
-.body{
+.body {
     margin: 0;
 }
-
-.container-fluid{
+.container-fluid {
     padding-left: 0;
     padding-right: 0;
-//    background-color: #FAFAFA;
+    //    background-color: #FAFAFA;
 }
-
-.editionBar__nav
-{
-  background-color: #F8F8F8;
-  border: 0.2rem solid #E7E7E7;
-  display: block;
-
-  //top: 35%;
-  //margin-left: 2rem;
- // position: absolute;
- // z-index: 2;
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: center;
-    height: 90vh;
-// 
- // width: 10rem;
-}
-
-.edition{
-     display: flex;
- flex-direction: row;
- justify-content: flex-start;
- align-items: flex-start;
-}
-
-.editionBar__button
-{
+.editionBar__nav {
+    background-color: #F8F8F8;
+    border: 0.2rem solid #E7E7E7;
     display: block;
-   // padding: 2rem 2rem 0rem 2rem;
-   padding: 1rem 2rem 1rem 2rem ;
+    //top: 35%;
+    //margin-left: 2rem;
+    // position: absolute;
+    // z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+    // 
+    // width: 10rem;
 }
-
-.buttons:hover
-{
-    background-color:#F6CED8;
+.edition {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-
-.buttons:focus
-{
+.editionBar__button {
+    display: block;
+    // padding: 2rem 2rem 0rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+.buttons:hover {
+    background-color: #F6CED8;
+}
+.buttons:focus {
     border: none;
     outline: none;
     background-color: #F5A9D0;
 }
-
-.activeHiddenButton
-{
-      background-color:#F5A9D0;
-       border: none;
-       outline: none;
-     //background-color: red;
+.activeHiddenButton {
+    background-color: #F5A9D0;
+    border: none;
+    outline: none;
+    //background-color: red;
 }
-
-.disableHiddenButton
-{
+.disableHiddenButton {
     background-color: #F8F8F8;
-   // background-color: green;
+    // background-color: green;
 }
-
-
-
-.editionBar__button:focus
-{
+.editionBar__button:focus {
     border: none;
     outline: none;
 }
-
-
-.editionBar__button:first-child
-{
+.editionBar__button:first-child {
     padding-top: 1rem;
- }
-
-
-.editionBar__button:last-child
-{
+}
+.editionBar__button:last-child {
     padding-bottom: 1rem;
- }
-
-.hiddenButtons__button{
+}
+.hiddenButtons__button {
     //padding: 1rem 1rem 1rem 1.5rem;   
     display: inline-block;
     align-content: center;
 }
-
-
-.hiddenButtons
-{
-
-   background-color: #F8F8F8;
-
-   // width:17%;
+.hiddenButtons {
+    background-color: #F8F8F8;
+    // width:17%;
     opacity: 0.2;
     visibility: hidden;
     display: none;
@@ -151,83 +110,169 @@
     transition: opacity 1s;
     text-align: center;
 }
-
-.buttonFont{
-   font-family: 'Love Ya Like A Sister', cursive;
-   font-size: 0.9em;
-   //margin-left: 1.5rem;
-   height: 4.5rem;
-   padding-top: 1rem;
-   padding-right: 0;
+.buttonFont {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 0.9em;
+    //margin-left: 1.5rem;
+    height: 4.5rem;
+    padding-top: 1rem;
+    padding-right: 0;
 }
-
-.buttonFontHidden
-{
-     font-family: 'Love Ya Like A Sister', cursive;
-     font-size: 0.8em;
-     margin-left: 0rem;
+.buttonFontHidden {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 0.8em;
+    margin-left: 0rem;
 }
-
-
-.editionBar__span
-{
+.editionBar__span {
     visibility: hidden;
     opacity: 1;
-    transition: opacity 1s;  
+    transition: opacity 1s;
 }
-
-.hiddenControl
-{
-  display:none;
+.hiddenControl {
+    display: none;
 }
-
-.activeControl
-{
-  display:inline-block;
+.activeControl {
+    display: inline-block;
 }
-
-.navBar__button{
+.navBar__button {
     width: 4vw;
     padding-bottom: 0;
     height: 5rem;
 }
-
-.navBar__button:last-child{
-  margin-left:2rem;
+.navBar__button:last-child {
+    margin-left: 2rem;
 }
-
-.infoPanel
-{
+.infoPanel {
     background-color: transparent;
-    height: 90vh;
-    border: 0.2rem solid #DDD ;
+    //    height: 100vh;
+    border: 0.2rem solid #DDD;
 }
-
 .navbar-brand {
-  padding: 0px; /* firefox bug fix */
+    padding: 0px;
+    /* firefox bug fix */
 }
 .navbar-brand>img {
-  height: 40rem;
-  padding: 15px; /* firefox bug fix */
-  width: 55rem;
-  position: absolute;
-  top:-7rem;
-  left: -2.8rem;
+    height: 40rem;
+    padding: 15px;
+    /* firefox bug fix */
+    width: 55rem;
+    position: absolute;
+    top: -7rem;
+    left: -2.8rem;
 }
-
-.noteText
-{
+//propiedad de panel de notas de bootstrap
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse > .list-group {
+    border-top: 1px solid #ddd;
+    font-family: -webkit-pictograph;
+    justify-content: center;
+    justify-items: inherit;
+    text-align: justify;
+}
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+    font-family: -webkit-pictograph;
+}
+.panel-group {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-end;
-    background-color:  #F8F8F8;
-    border-radius: 0.7rem;
-   
-  //  border: 0.2rem solid #DDD ; 
+    align-content: space-around;
 }
-
-
-
-
-
+.navbar-form {
+    padding-left: 0;
+}
+.searchFormHidden {
+    display: none;
+}
+.searchFormVisible {
+    display: block;
+}
+.titleNoteControl {
+    border: none;
+    outline: none;
+    // background-color: #F8F8F8 ;
+    color: #FF7138;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 1.8rem;
+    //overflow: auto;
+}
+.noteText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+    //  background-color:  #F8F8F8 ;
+    border-radius: 0.7rem;
+    //  border: 0.2rem solid #DDD ; 
+}
+.titleNoteControl:hover {
+    border: none;
+    outline: none;
+    color: #FF7138;
+    font-size: 3rem;
+    transition: font-size 1s;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+.titleNoteControl:focus {
+    color: #FF7138;
+    font-size: 3rem;
+}
+.editionNotesControl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    //  justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    //  background-color:yellow;
+    padding: 0.2rem;
+    //  background-color:  #F8F8F8 ;
+    border-radius: 0.7rem;
+}
+.editionButtonControls {
+    margin: 0.5rem;
+}
+.increaseSizeNoteTitle {
+    color: #FF7138;
+    font-size: 2.5rem;
+}
+.editionButtonControls {
+    color: #FF7138;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 30px;
+    border: none;
+    // border: 2px solid  #FF7138 ;
+    border-radius: 4px;
+    background-color: transparent;
+    width: auto;
+    padding: 0.4rem;
+    background-color: #F6CED8;
+}
+.editionButtonControls:hover {
+    background-color: #F5A9D0;
+    color: #FF7138;
+    border: none;
+    //  border: 2px solid  #FF7138 ;
+}
+.editionTextControl {
+    font-size: 1.4rem;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+.form-control:focus {
+    border-color: #ccc;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 8px rgba(242, 188, 134, 1)
+}
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+    background-color: #F6CED8;
+    height: 3.4rem;
+}

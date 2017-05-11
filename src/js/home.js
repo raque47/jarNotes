@@ -5,13 +5,10 @@ notesButton.addEventListener('click', function () { toggleControls(hiddenNotesBu
 notesButton.addEventListener('mouseover', function () { toggleControls(hiddenNotesButton); });
 
 
-
 var tagButton = document.getElementById('tagsControl');
 var hiddenTagsButton = document.getElementById('hiddenControlTagsButtons');
 tagButton.addEventListener('click', function () { toggleControls(hiddenTagsButton); changeColorMenuButtons(tagButton); setEventsHiddenButtons(hiddenTagsButton) });
 tagButton.addEventListener('mouseover', function () { toggleControls(hiddenTagsButton); });
-
-
 
 
 var folderButton = document.getElementById('foldersControl');
@@ -20,8 +17,29 @@ var hiddenFoldersButton = document.getElementById('hiddenControlFoldersButtons')
 folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton); changeColorMenuButtons(folderButton); setEventsHiddenButtons(hiddenFoldersButton) });
 folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton); });
 
+ 
+var searchForm =document.getElementById('searchForm');
+var searchFormInput=  document.getElementById('searchForm__input');
+hiddenButtonSearchNote.addEventListener('click', function(){  setSearchFormVisible(searchForm,searchFormInput );});
 
 
+var titleNote = document.getElementById('titleNote');
+//titleNote.addEventListener('click', function(){increaseFontSize(titleNote)});
+titleNote.addEventListener("keyup", function(event) {
+   // event.preventDefault();
+    if (event.keyCode == 13) {
+        setTitleNote(titleNote)
+    }
+});
+
+function setSearchFormVisible(controlComponent1, controlComponent2 ) {
+    //resetVisible();
+    console.log('ENTRE');
+    controlComponent1.classList.remove('searchFormHidden');
+    controlComponent1.classList.add('searchFormVisible');
+    controlComponent2.classList.remove('searchFormHidden');
+    controlComponent2.classList.add('searchFormVisible');
+}
 
 function setEventsHiddenButtons(controlComponent) {
     for (var i = 0; i < controlComponent.childNodes.length; ++i) {
@@ -140,4 +158,9 @@ function toggleEditionBar() {
     }
 }
 
-
+function setTitleNote(controlComponent)
+{
+   controlComponent.classList.add('increaseSizeNoteTitle');
+   var textBoxNote = document.getElementById('noteContent');
+   textBoxNote.focus();
+}
