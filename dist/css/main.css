@@ -5855,10 +5855,10 @@ button.close {
 .editionBar__nav {
   background-color: #F8F8F8;
   border: 0.2rem solid #E7E7E7;
-  position: absolute;
   display: block;
   position: fixed;
-  z-index: 2; }
+  z-index: 2;
+  height: 90vh; }
 
 .editionBar__button {
   display: block;
@@ -5897,15 +5897,9 @@ button.close {
   padding-top: 1rem;
   padding-right: 0; }
 
-<<<<<<< HEAD
-.hiddenButtonsNotes {
-  visibility: hidden;
-  left: -19.5rem; }
-=======
 .buttonFontHidden {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 1.1rem; }
->>>>>>> 65fefd00beb3396ee2048309c63f69785a36a229
 
 .editionBar__span {
   visibility: hidden;
@@ -5919,10 +5913,6 @@ button.close {
   display: inline-block; }
 
 .navBar__button {
-<<<<<<< HEAD
-  height: 5rem;
-  padding: 0rem 2rem 0rem 2rem; }
-=======
   width: 3rem;
   padding-bottom: 0;
   height: 5rem; }
@@ -5931,4 +5921,3 @@ button.close {
   background-color: transparent;
   height: 90vh;
   border: 0.2rem solid #DDD; }
->>>>>>> 65fefd00beb3396ee2048309c63f69785a36a229

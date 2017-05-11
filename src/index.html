@@ -33,20 +33,20 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <button id="notesControl" class="navBar__button buttons"> <img src="../images/notes-button.svg" class="navBar__images"></button>
-                                <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes hiddenButtons">
-                                    <button class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
-                                    <button class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>
-                                    <button class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Note</span></button>
-                                </div>
+                            <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes hiddenButtons">
+                                <button id="hiddenButton" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
+                                <button id="hiddenButton" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>
+                                <button id="hiddenButton" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Note</span></button>
+                            </div>
                             <button id="tagsControl" class="navBar__button buttons"><img src="../images/tag-button.svg" class="navBar__images"></button>
-                             <div id="hiddenControlTagsButtons" class="hiddenButtonsTag hiddenButtons">
+                            <div id="hiddenControlTagsButtons" class="hiddenButtonsTag hiddenButtons">
                                 <button class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Tag</span></button>
                                 <button class="hiddenButtons__button buttons"><img src="../images/add-tag-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Tag</span></button>
                                 <button class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tag</span></button>
                             </div>
-                            
+
                             <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images"></button>
-                        
+
                             <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder hiddenButtons">
                                 <button class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Folder</span></button>
                                 <button class="hiddenButtons__button buttons"><img src="../images/add-folder-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Folder</span></button>
@@ -63,49 +63,41 @@
 
             </nav>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-
-                      
-                    </div>
-                </div>
-            </div>
         </header>
 
     </div>
 
+    <div class="container-fluid">
 
-    <div class="container">
         <div class="row">
-            <div class="col-md-1 col-md-pull-1">
-                
-    <nav class="editionBar__nav">
-        <button id="toggleBar" class="editionBar__button buttons"><img src="../images/menu-button.svg" class="navBar__images"></button> 
-        <button class="editionBar__button buttons"><img src="../images/alarm-clock-button.svg" class="navBar__images"> <span class="editionBar__span buttonFont hiddenControl">Set Reminder</span></button>
-       
-        <button class="editionBar__button buttons"><img src="../images/star-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Add Shortcut</span></button>
+            <div class="col-md-1">
 
-        <button class="editionBar__button buttons"><img src="../images/information.-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Note info</span></button>
+                <nav class="editionBar__nav">
+                    <button id="toggleBar" class="editionBar__button buttons"><img src="../images/menu-button.svg" class="navBar__images"></button>
+                    <button class="editionBar__button buttons"><img src="../images/alarm-clock-button.svg" class="navBar__images"> <span class="editionBar__span buttonFont hiddenControl">Set Reminder</span></button>
 
-        <button class="editionBar__button buttons"><img src="../images/trash-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Delete Note</span></button>
-  
-        <button class="editionBar__button buttons"><img src="../images/share-links.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Copy Notelink</span></button>
+                    <button class="editionBar__button buttons"><img src="../images/star-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Add Shortcut</span></button>
 
-    </nav>
+                    <button class="editionBar__button buttons"><img src="../images/information.-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Note info</span></button>
+
+                    <button class="editionBar__button buttons"><img src="../images/trash-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Delete Note</span></button>
+
+                    <button class="editionBar__button buttons"><img src="../images/share-links.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Copy Notelink</span></button>
+
+                </nav>
             </div>
 
             <div class="col-md-3 content infoPanel">
-                
+
             </div>
             <div class="col-md-8 content">
                 <div class="form-group">
                     <textarea class="form-control" rows="5" id="comment" placeholder="Write a new note..."></textarea>
                 </div>
             </div>
+
         </div>
     </div>
-
 
 
 

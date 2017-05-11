@@ -1,27 +1,85 @@
 var notesButton = document.getElementById('notesControl');
 var hiddenNotesButton = document.getElementById('hiddenControlNotesButtons');                               
-var eventNotesButton = notesButton.addEventListener('click', function () {toggleControls(hiddenNotesButton) });
-notesButton.addEventListener('mouseover', function () {toggleControls(hiddenNotesButton) });
-notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
+notesButton.addEventListener('click', function () {toggleControls(hiddenNotesButton); changeColorMenuButtons(notesButton); setEventsHiddenButtons(hiddenNotesButton)  });
+
+notesButton.addEventListener('mouseover', function () {toggleControls(hiddenNotesButton); });
+
+
 
 var tagButton = document.getElementById('tagsControl');
 var hiddenTagsButton = document.getElementById('hiddenControlTagsButtons');       
-var eventTagsButton = tagButton.addEventListener('click', function () { toggleControls(hiddenTagsButton) });
-tagButton.addEventListener('mouseover', function () { toggleControls(hiddenTagsButton) });
-notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
+tagButton.addEventListener('click', function () { toggleControls(hiddenTagsButton); changeColorMenuButtons(tagButton); setEventsHiddenButtons(hiddenTagsButton) });
+tagButton.addEventListener('mouseover', function () { toggleControls(hiddenTagsButton);  });
+
+
 
 
 var folderButton = document.getElementById('foldersControl');
 var hiddenFoldersButton = document.getElementById('hiddenControlFoldersButtons');       
 
-var eventFoldersButton = folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton)});
-folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton)});
-notesButton.addEventListener('click', function () {changeColor(hiddenNotesButton) });
-
-var eventFoldersButton = folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton); });
-folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton) });
+folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton); changeColorMenuButtons(folderButton); setEventsHiddenButtons(hiddenFoldersButton) });
+folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton); });
 
 
+
+
+function setEventsHiddenButtons(controlComponent)
+{
+    for(var i=0; i<controlComponent.childNodes.length; ++i )
+    {
+        console.log('el hijo es: ' + controlComponent.childNodes[i]);
+        controlComponent.childNodes[i].addEventListener('click', function(){changeColorHiddenButtons(controlComponent)});
+    }
+}
+
+
+function changeColorHiddenButtons(controlComponent) {
+    var hiddenButtons = controlComponent.childNodes;
+    console.log('hijo escondido' + hiddenButtons[counter]);
+
+    var counter = 1;
+    var inactive = true;
+    while( inactive ){
+        
+        if(hiddenButtons[counter]. ==true)
+            {
+                inactive = false;
+            }
+        counter = counter + 2;
+    }
+    hiddenButtons[counter].style.backgroundColor ='#FF0000';
+      console.log('ENTREEEEE');
+
+    
+ 
+   
+}
+
+function changeColorMenuButtons(controlComponent) {
+    resetColorMenuButtons();
+    if(controlComponent.style.backgroundColor == '#FF0000'){
+         controlComponent.style.backgroundColor = '#F8F8F8';
+    }
+    else{
+         controlComponent.style.backgroundColor = '#FF0000';
+    }
+    console.log(controlComponent); 
+  
+   
+}
+
+function resetColorMenuButtons(){
+    notesButton.style.backgroundColor = '#F8F8F8';    
+    tagButton.style.backgroundColor = '#F8F8F8';
+    folderButton.style.backgroundColor = '#F8F8F8';
+}
+
+function resetColorHiddenButtons(){
+    var hiddenButtons = document.getElementsByClassName('hiddenButtons__button');
+    for(var i=0; i<hiddenButtons.length; ++i ){
+        hiddenButtons[i].style.backgroundColor ='#F8F8F8';
+    }
+}
 
 function toggleControls(controlComponent) {
     resetControls();
@@ -47,14 +105,9 @@ function resetControls(){
     hiddenTagsButton.style.opacity = 0.2;
     
     hiddenFoldersButton.style.visibility = 'hidden';
-    hiddenFoldersButton.style.opacity = 0.2;
+    hiddenFoldersButton.style.opacity = 0.2; 
 }
 
-function changeColor(controlComponent) {
-    resetColor();
-    console.log(controlComponent);
-    controlComponent.style.backgroundColor = '#F6CED8';
-}
 
 /*Button's information about the notes, tags and folders*/
 function resetControls()
