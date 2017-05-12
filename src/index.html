@@ -86,7 +86,6 @@
             </div>
             <div class="col-md-8">
                 <div class="form-group noteText">
-                    <label for="usr"></label>
                     <input type="text" placeholder="Title" class="titleNoteControl" id="titleNote">
                     <textarea class="form-control" rows="5" id="noteContent" placeholder="Write a new note..."></textarea>
                     <div class="editionNotesControl">
@@ -94,20 +93,24 @@
                         <button class="editionButtonControls"><img src="../images/upload-button.svg" class="navBar__images"></button>
                         <button id="addNoteButton" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
                        
+                        <form action="" onsubmit="return addNote()">
+                            <button type="submit" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
+                        </form>
                     </div>
                 </div>
             </div>
 
         <div class="col-md-3 ">
                 <div class="container-fluid infoPanel ">
-
-                   <div class="tittleInformationPanel">
-                        <h2 class="fontFamily"> Notes</h2>
+            <div class="col-md-3 infoPanel panelFolders">
+                <div class="container-fluid">
+                    <div>
+                        <h2 id="informationPanelTittle" class="fontFamily"> Notes</h2>
                     </div>
 
-                   <form class="navbar-form" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <form id="searchForm" class="navbar-form searchFormHidden" role="search">
+                        <div id="searchForm__input" class="input-group">
+                            <input type="text" class="form-control searchFormHidden" placeholder="Search" name="srch-term" id="srch-term">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><img src="../images/search-button.svg" class="searchButtonInformationPanel"> </button>
                             </div>
@@ -118,9 +121,23 @@
                    <ul id="listInformationPanel">
 
                    </ul>
+                    <div id="listInformationPanelNotes">
 
+                    </div>
+                    
+                    
+                    <div id= "addNewElementForm" class="form-group addNewElementPanel addNewElementFormHidden">
+                        <div class="addNewElementTittleType">
+                            <h4 id="" class="fontFamily"> Add a new tag</h4>
+                        </div>
 
-               </div>
+                        <input id="addNewElementTittle" type="text" placeholder="Title" class="titleNoteControl">
+                        <textarea id="addNewElementContent" class="form-control" rows="5" placeholder="Write a new note..."></textarea>
+                        <form action="" onsubmit="return addNote()">
+                            <button type="submit" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
+                        </form>
+                    </div>
+                </div>
                 <!--container-fluid-->
             </div>
             <!-- infoPanel End -->
@@ -129,13 +146,14 @@
 
 
         </div>
+    </div>
 
 
 
-        <script src="../src/js/home.js"></script>
-        <script src="jquery/jquery.min.js"></script>
-        <script src="js/javascripts/bootstrap.js"></script>
-        <script src="js/javascripts/bootstrap.min.js"></script>
+    <script src="../src/js/home.js"></script>
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/javascripts/bootstrap.js"></script>
+    <script src="js/javascripts/bootstrap.min.js"></script>
 
 </body>
 

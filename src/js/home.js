@@ -1,29 +1,96 @@
 var notesButton = document.getElementById('notesControl');
 var hiddenNotesButton = document.getElementById('hiddenControlNotesButtons');
+
 notesButton.addEventListener('click', function () { toggleControls(hiddenNotesButton); changeColorMenuButtons(notesButton); setEventsHiddenButtons(hiddenNotesButton) });
 notesButton.addEventListener('mouseover', function () { toggleControls(hiddenNotesButton); });
+
+notesButton.addEventListener('click', function () {
+    toggleControls(hiddenNotesButton);
+    changeColorMenuButtons(notesButton);
+    setEventsHiddenButtons(hiddenNotesButton);
+    setInformationPanelTittle(notesButton)
+});
+
+notesButton.addEventListener('mouseover', function () {
+    toggleControls(hiddenNotesButton)
+});
+
 
 
 var tagButton = document.getElementById('tagsControl');
 var hiddenTagsButton = document.getElementById('hiddenControlTagsButtons');
-tagButton.addEventListener('click', function () { toggleControls(hiddenTagsButton); changeColorMenuButtons(tagButton); setEventsHiddenButtons(hiddenTagsButton) });
-tagButton.addEventListener('mouseover', function () { toggleControls(hiddenTagsButton); });
+tagButton.addEventListener('click', function () {
+    toggleControls(hiddenTagsButton);
+    changeColorMenuButtons(tagButton);
+    setEventsHiddenButtons(hiddenTagsButton);
+    setInformationPanelTittle(tagButton)
+});
+tagButton.addEventListener('mouseover', function () {
+    toggleControls(hiddenTagsButton);
+});
 
 
 var folderButton = document.getElementById('foldersControl');
 var hiddenFoldersButton = document.getElementById('hiddenControlFoldersButtons');
 
-folderButton.addEventListener('click', function () { toggleControls(hiddenFoldersButton); changeColorMenuButtons(folderButton); setEventsHiddenButtons(hiddenFoldersButton) });
-folderButton.addEventListener('mouseover', function () { toggleControls(hiddenFoldersButton); });
+folderButton.addEventListener('click', function () {
+    toggleControls(hiddenFoldersButton);
+    changeColorMenuButtons(folderButton);
+    setEventsHiddenButtons(hiddenFoldersButton);
+    setInformationPanelTittle(folderButton);
+});
+folderButton.addEventListener('mouseover', function () {
+    toggleControls(hiddenFoldersButton);
+});
 
- 
-var searchForm =document.getElementById('searchForm');
-var searchFormInput=  document.getElementById('searchForm__input');
-hiddenButtonSearchNote.addEventListener('click', function(){  setSearchFormVisible(searchForm,searchFormInput );});
+
+var searchForm = document.getElementById('searchForm');
+var searchFormInput = document.getElementById('searchForm__input');
+var hiddenButtonSearchNote = document.getElementById('hiddenButtonSearchNote');
+hiddenButtonSearchNote.addEventListener('click', function () {
+    setSearchFormVisible(searchForm, searchFormInput);
+});
+
+//When the hidden button of search tag is clicked the form of seacrh tag comes visisble 
+var hiddenButtonSearchTag = document.getElementById('hiddenButtonSearchTag');
+hiddenButtonSearchTag.addEventListener('click', function () {
+    setSearchFormVisible(searchForm, searchFormInput);
+});
+//When the hidden button of search folder is clicked the form of folder comes visisble 
+var hiddenButtonSearchFolder = document.getElementById('hiddenButtonSearchFolder');
+hiddenButtonSearchFolder.addEventListener('click', function () {
+    setAddNewElementFormVisible(searchForm, searchFormInput);
+});
+
+// Form for adding a new tag o a new folder
+var addNewElementForm = document.getElementById('addNewElementForm');
+
+//When the hidden button of add tag is clicked the form of add a new tag comes visisble 
+var hiddenButtonAddTag = document.getElementById('hiddenButtonAddTag');
+hiddenButtonAddTag.addEventListener('click', function () {
+    setAddNewElementFormVisible(addNewElementForm);
+});
+
+//When the hidden button of add folder is clicked the form of add a new folder comes visisble 
+var hiddenButtonAddFolder = document.getElementById('hiddenButtonAddFolder');
+hiddenButtonAddFolder.addEventListener('click', function () {
+    setAddNewElementFormVisible(addNewElementForm);
+});
+
+
+
+
+
+function setAddNewElementFormVisible(controlComponent) {
+    controlComponent.classList.remove('addNewElementFormHidden');
+    controlComponent.classList.add('addNewElementFormVisible');
+
+};
+
 
 
 var titleNote = document.getElementById('titleNote');
-titleNote.addEventListener("keyup", function(event) {
+titleNote.addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.keyCode == 13) {
         setTitleNote(titleNote)
@@ -34,6 +101,47 @@ var addNoteButton = document.getElementById('addNoteButton');
 addNoteButton.addEventListener('click', function(){ addNote() } );
 
 function setSearchFormVisible(controlComponent1, controlComponent2 ) {
+
+
+function setInformationPanelTittle(component) {
+    var elementClicked = component.id;
+
+    switch (elementClicked) {
+        case "notesControl":
+            console.log('notass');
+            document.getElementById('informationPanelTittle').innerHTML = 'Notes';
+            addNewElementForm.classList.remove('addNewElementFormVisible');
+            addNewElementForm.classList.add('addNewElementFormHidden');
+            searchForm.classList.remove('searchFormVisible');
+            searchForm.classList.add('searchFormHidden');
+            searchFormInput.classList.remove('searchFormHidden');
+            searchFormInput.classList.add('searchFormVisible');
+            break;
+        case "tagsControl":
+            document.getElementById('informationPanelTittle').innerHTML = 'Tags';
+            addNewElementForm.classList.remove('addNewElementFormVisible');
+            addNewElementForm.classList.add('addNewElementFormHidden');
+            searchForm.classList.remove('searchFormVisible');
+            searchForm.classList.add('searchFormHidden');
+            searchFormInput.classList.remove('searchFormVisible');
+            searchFormInput.classList.add('searchFormHidden');
+            break;
+        case "foldersControl":
+            document.getElementById('informationPanelTittle').innerHTML = 'Folders';
+            console.log('folders');
+            addNewElementForm.classList.remove('addNewElementFormVisible');
+            addNewElementForm.classList.add('addNewElementFormHidden');
+            searchForm.classList.remove('searchFormVisible');
+            searchForm.classList.add('searchFormHidden');
+            searchFormInput.classList.remove('searchFormVisible');
+            searchFormInput.classList.add('searchFormHidden');
+            break;
+    }
+}
+
+
+
+function setSearchFormVisible(controlComponent1, controlComponent2) {
     controlComponent1.classList.remove('searchFormHidden');
     controlComponent1.classList.add('searchFormVisible');
     controlComponent2.classList.remove('searchFormHidden');
@@ -42,7 +150,9 @@ function setSearchFormVisible(controlComponent1, controlComponent2 ) {
 
 function setEventsHiddenButtons(controlComponent) {
     for (var i = 0; i < controlComponent.childNodes.length; ++i) {
-        controlComponent.childNodes[i].addEventListener('click', function(){  changeColorHiddenButtons(this);});
+        controlComponent.childNodes[i].addEventListener('click', function () {
+            changeColorHiddenButtons(this);
+        });
     }
 }
 
@@ -56,8 +166,8 @@ function changeColorHiddenButtons(controlComponent) {
 function changeColorMenuButtons(controlComponent) {
     resetColorMenuButtons();
     resetColorHiddenButtons();
- 
-     controlComponent.classList.remove('disableHiddenButton');
+
+    controlComponent.classList.remove('disableHiddenButton');
     controlComponent.classList.add('activeHiddenButton');
 }
 
@@ -75,7 +185,7 @@ function resetColorMenuButtons() {
 function resetColorHiddenButtons() {
     var hiddenButtons = document.getElementsByClassName('hiddenButtons__button');
     for (var i = 0; i < hiddenButtons.length; ++i) {
-       hiddenButtons[i].classList.remove('activeHiddenButton');
+        hiddenButtons[i].classList.remove('activeHiddenButton');
         hiddenButtons[i].classList.add('disableHiddenButton');
     }
 }
@@ -137,8 +247,7 @@ function toggleEditionBar() {
             editionBarTexts[i].style.opacity = 0;
             editionBarTexts[i].classList.remove('activeControl');
             editionBarTexts[i].classList.add('hiddenControl');
-        }
-        else {
+        } else {
             editionBarTexts[i].style.visibility = "visible";
             editionBarTexts[i].style.opacity = 1;
             editionBarTexts[i].classList.remove('hiddenControl');
@@ -148,17 +257,16 @@ function toggleEditionBar() {
 
     if (toggleBarElement.classList.contains('active')) {
         toggleBarElement.classList.remove('active');
-    }
-    else {
+    } else {
         toggleBarElement.classList.add('active');
     }
-}
+};
 
 function setTitleNote(controlComponent) {
-   controlComponent.classList.add('increaseSizeNoteTitle');
-   var textBoxNote = document.getElementById('noteContent');
-   textBoxNote.focus();
-}
+    controlComponent.classList.add('increaseSizeNoteTitle');
+    var textBoxNote = document.getElementById('noteContent');
+    textBoxNote.focus();
+};
 
 function addNote() {
 
@@ -219,7 +327,7 @@ function addNote() {
     //Title area and text area from the note edition is cleaned
     noteTitleBox.value = "";
     noteTextBox.value = "";
-}
+};
 
 function appendImage(component, imageLocation)
 {
@@ -232,10 +340,9 @@ function appendImage(component, imageLocation)
 
     return component;
     
-}
+};
 
-function showNote(component)
-{
+function showNote(component){
     console.log('El componente es: !!!!' + component);
     var noteInformation = component.parentNode;
     var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
@@ -245,4 +352,18 @@ function showNote(component)
  
     
     console.log('Mostrar nota!!!!' + noteContent);
-}
+
+    /*  var noteTextBox = document.getElementById('noteContent');
+      var noteText = noteTextBox.value;
+
+      document.querySelector('.panel-body').innerHTML = noteText;
+      noteTextBox.value = '';
+
+      var panelTitle = document.getElementById('panel1Title');
+      var title = document.getElementById('titleNote');
+
+      panelTitle.innerHTML = title.value;
+      title.value = ""; */
+} 
+
+
