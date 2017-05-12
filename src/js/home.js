@@ -1,7 +1,6 @@
 var notesButton = document.getElementById('notesControl');
 var hiddenNotesButton = document.getElementById('hiddenControlNotesButtons');
 notesButton.addEventListener('click', function () { toggleControls(hiddenNotesButton); changeColorMenuButtons(notesButton); setEventsHiddenButtons(hiddenNotesButton) });
-
 notesButton.addEventListener('mouseover', function () { toggleControls(hiddenNotesButton); });
 
 
@@ -30,6 +29,9 @@ titleNote.addEventListener("keyup", function(event) {
         setTitleNote(titleNote)
     }
 });
+
+var addNoteButton = document.getElementById('addNoteButton');
+addNoteButton.addEventListener('click', function(){ addNote() } );
 
 function setSearchFormVisible(controlComponent1, controlComponent2 ) {
     controlComponent1.classList.remove('searchFormHidden');
@@ -161,15 +163,86 @@ function setTitleNote(controlComponent) {
 function addNote() {
 
     console.log('NOOOTAASS');
-  /*  var noteTextBox = document.getElementById('noteContent');
+
+    var panelInformation = document.getElementById('listInformationPanel');
+
+    var noteTextBox = document.getElementById('noteContent');
     var noteText = noteTextBox.value;
 
-    document.querySelector('.panel-body').innerHTML = noteText;
-    noteTextBox.value = '';
+    var noteTitleBox = document.getElementById('titleNote');
+    var noteTitle =  noteTitleBox.value;
 
-    var panelTitle = document.getElementById('panel1Title');
-    var title = document.getElementById('titleNote');
+    //Create the item from the notes
+    var notePanel = document.createElement('li');
 
-    panelTitle.innerHTML = title.value;
-    title.value = ""; */
+    //Create the title of the note 
+    var titleArea = document.createElement('span');
+    var noteTitleNode = document.createTextNode(noteTitle);
+    titleArea.appendChild(noteTitleNode);
+    titleArea.classList.add('noteAddedTitle');
+    notePanel.appendChild(titleArea);
+  
+
+    //Create the buttons for the note control
+    var imageViewButton = document.createElement("button");
+    var imageLocation = '../images/view-button.svg';
+    imageViewButton = appendImage(imageViewButton, imageLocation); 
+    imageViewButton.classList.add('buttons');
+    imageViewButton.classList.add('infoPanelButtons');
+    imageViewButton.setAttribute('id', 'viewNote');
+    imageViewButton.setAttribute('onclick', 'showNote(this)' );
+    notePanel.appendChild(imageViewButton);
+
+    imageViewButton =  document.createElement("button");
+    imageLocation = '../images/edit-button.svg';
+    imageViewButton = appendImage(imageViewButton, imageLocation); 
+    imageViewButton.classList.add('buttons');
+    imageViewButton.classList.add('infoPanelButtons');
+    imageViewButton.setAttribute('id', 'editNote');
+    imageViewButton.setAttribute('onclick', 'editNote(this)');
+    notePanel.appendChild(imageViewButton);
+
+
+    //Create the content of the note
+    var textArea = document.createElement('p');
+    textArea.classList.add('hideComponent');
+    var noteContentNode = document.createTextNode(noteText);
+    textArea.appendChild(noteContentNode);
+    notePanel.appendChild(textArea);
+
+    //Add style to the added note
+    notePanel.classList.add('notesBackground');
+ 
+    //Append the new note to the panel information   
+    panelInformation.appendChild(notePanel);
+
+    //Title area and text area from the note edition is cleaned
+    noteTitleBox.value = "";
+    noteTextBox.value = "";
+}
+
+function appendImage(component, imageLocation)
+{
+    var viewImage = document.createElement("img");
+    viewImage.alt = "View Note";
+    viewImage.setAttribute('src', imageLocation);
+    viewImage.classList.add('navBar__images');
+
+    component.appendChild(viewImage);
+
+    return component;
+    
+}
+
+function showNote(component)
+{
+    console.log('El componente es: !!!!' + component);
+    var noteInformation = component.parentNode;
+    var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
+    noteContent.classList.remove('hideComponent');
+    //noteContent.classList.add('transitionShowNoteContent');
+    noteContent.classList.add('showComponent');
+ 
+    
+    console.log('Mostrar nota!!!!' + noteContent);
 }

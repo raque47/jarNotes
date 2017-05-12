@@ -92,15 +92,14 @@
                     <div class="editionNotesControl">
                         <button class="editionButtonControls"><img src="../images/paint-button.svg" class="navBar__images"></button>
                         <button class="editionButtonControls"><img src="../images/upload-button.svg" class="navBar__images"></button>
-                        <form action="" onsubmit="return addNote()">
-                            <button type "submit" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
-                        </form>
+                        <button id="addNoteButton" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
+                       
                     </div>
                 </div>
             </div>
 
-        <div class="col-md-3 infoPanel panelFolders">
-                <div class="container-fluid">
+        <div class="col-md-3 ">
+                <div class="container-fluid infoPanel ">
 
                    <div class="tittleInformationPanel">
                         <h2 class="fontFamily"> Notes</h2>
@@ -116,9 +115,9 @@
                     </form>
 
 
-                   <div class="listInformationPanel">
+                   <ul id="listInformationPanel">
 
-                   </div>
+                   </ul>
 
 
                </div>
