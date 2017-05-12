@@ -189,6 +189,13 @@ $font-stack: 'Love Ya Like A Sister', cursive;
 .searchFormVisible {
     display: block;
 }
+
+.addNewElementFormHidden {
+    display: none;
+}
+.addNewElementFormVisible {
+    display: block;
+}
 .titleNoteControl {
     border: none;
     outline: none;
