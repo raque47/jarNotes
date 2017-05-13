@@ -54,7 +54,7 @@ hiddenButtonSearchTag.addEventListener('click', function () {
 //When the hidden button of search folder is clicked the form of folder comes visisble 
 var hiddenButtonSearchFolder = document.getElementById('hiddenButtonSearchFolder');
 hiddenButtonSearchFolder.addEventListener('click', function () {
-    setAddNewElementFormVisible(searchForm, searchFormInput);
+    setSearchFormVisible(searchForm, searchFormInput);
 });
 
 // Form for adding a new tag o a new folder
@@ -95,36 +95,37 @@ titleNote.addEventListener("keyup", function (event) {
 
 function setInformationPanelTittle(component) {
     var elementClicked = component.id;
-
     switch (elementClicked) {
         case "notesControl":
             console.log('notass');
             document.getElementById('informationPanelTittle').innerHTML = 'Notes';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormHidden');
-            searchFormInput.classList.add('searchFormVisible');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
+            
             break;
         case "tagsControl":
+            console.log('tags');
             document.getElementById('informationPanelTittle').innerHTML = 'Tags';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormVisible');
-            searchFormInput.classList.add('searchFormHidden');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
             break;
         case "foldersControl":
-            document.getElementById('informationPanelTittle').innerHTML = 'Folders';
             console.log('folders');
+            document.getElementById('informationPanelTittle').innerHTML = 'Folders';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormVisible');
-            searchFormInput.classList.add('searchFormHidden');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
             break;
     }
 }
@@ -132,10 +133,10 @@ function setInformationPanelTittle(component) {
 
 
 function setSearchFormVisible(controlComponent1, controlComponent2) {
-    controlComponent1.classList.remove('searchFormHidden');
-    controlComponent1.classList.add('searchFormVisible');
-    controlComponent2.classList.remove('searchFormHidden');
-    controlComponent2.classList.add('searchFormVisible');
+    controlComponent1.classList.remove('addNewElementFormHidden');
+    controlComponent1.classList.add('addNewElementFormVisible');
+    controlComponent2.classList.remove('addNewElementFormHidden');
+    controlComponent2.classList.add('addNewElementFormVisible');
 }
 
 function setEventsHiddenButtons(controlComponent) {
