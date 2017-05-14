@@ -5818,6 +5818,11 @@ button.close {
   background-color: #3fbd01;
   font-size: 16px; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .home {
   background-color: #3fbd01; }
 
@@ -5946,15 +5951,6 @@ button.close {
 
 .navBar__button:last-child {
   margin-left: 2rem; }
-
-.infoPanel {
-  background-color: transparent;
-  border: 0.2rem solid #DDD;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch; }
 
 .navbar-brand {
   padding: 0px;
@@ -6116,5 +6112,129 @@ button.close {
   opacity: 0;
   transition: opacity 5s; }
 
+.infoPanel {
+  background-color: transparent;
+  height: 85vh;
+  border: 0.2rem solid #DDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+  padding-left: 1.8rem; }
+
 .infoPanelButtons {
   display: inline; }
+
+.container-fluid-fix {
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+textarea.form-control {
+  height: 60vh; }
+
+.addNewElementTittleType {
+  padding: 1rem 0rem 0.8rem 0.8rem; }
+
+.textAreaAddElement {
+  width: 95%; }
+
+.formAddNewElement {
+  padding-left: 1rem; }
+
+.addNewElementButton {
+  margin: 0; }
+
+.contentPanel {
+  display: none; }
+
+/* Media Queries */
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D; }
+  textarea.form-control {
+    width: 100%; }
+  .editionBar__nav {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh; }
+  .noteText {
+    height: 30vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
+  .infoPanel {
+    height: 20vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center; }
+  .firstElement {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1.5rem; }
+  .secondElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 2.5rem; }
+  .thirthElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto; } }
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E;
+    /* Yellow */ }
+  .editionBar__nav {
+    height: 55%; } }
+
+/*Ipad Pro*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  textarea.form-control {
+    width: 100%; }
+  .editionBar__nav {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh; }
+  .noteText {
+    height: 40vh;
+    width: 100%; }
+  .infoPanel {
+    height: 30vh;
+    width: 100%; }
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center; }
+  .firstElement {
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1.5rem; }
+  .secondElement {
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 2.5rem; }
+  .thirthElement {
+    flex: 1 1 auto;
+    align-self: auto;
+    width: 67%;
+    margin: 3rem; } }

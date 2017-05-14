@@ -60,7 +60,7 @@ hiddenButtonSearchTag.addEventListener('click', function () {
 //When the hidden button of search folder is clicked the form of folder comes visisble 
 var hiddenButtonSearchFolder = document.getElementById('hiddenButtonSearchFolder');
 hiddenButtonSearchFolder.addEventListener('click', function () {
-    setAddNewElementFormVisible(searchForm, searchFormInput);
+    setSearchFormVisible(searchForm, searchFormInput);
 });
 
 // Form for adding a new tag o a new folder
@@ -105,39 +105,39 @@ function setSearchFormVisible(controlComponent1, controlComponent2){
 
 };
 
-
 function setInformationPanelTittle(component) {
     var elementClicked = component.id;
-
     switch (elementClicked) {
         case "notesControl":
             console.log('notass');
             document.getElementById('informationPanelTittle').innerHTML = 'Notes';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormHidden');
-            searchFormInput.classList.add('searchFormVisible');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
+            
             break;
         case "tagsControl":
+            console.log('tags');
             document.getElementById('informationPanelTittle').innerHTML = 'Tags';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormVisible');
-            searchFormInput.classList.add('searchFormHidden');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
             break;
         case "foldersControl":
-            document.getElementById('informationPanelTittle').innerHTML = 'Folders';
             console.log('folders');
+            document.getElementById('informationPanelTittle').innerHTML = 'Folders';
             addNewElementForm.classList.remove('addNewElementFormVisible');
             addNewElementForm.classList.add('addNewElementFormHidden');
-            searchForm.classList.remove('searchFormVisible');
-            searchForm.classList.add('searchFormHidden');
-            searchFormInput.classList.remove('searchFormVisible');
-            searchFormInput.classList.add('searchFormHidden');
+            searchForm.classList.remove('addNewElementFormVisible');
+            searchForm.classList.add('addNewElementFormHidden');
+            searchFormInput.classList.remove('addNewElementFormVisible');
+            searchFormInput.classList.add('addNewElementFormHidden');
             break;
     }
 };
@@ -145,11 +145,18 @@ function setInformationPanelTittle(component) {
 
 
 function setSearchFormVisible(controlComponent1, controlComponent2) {
-    controlComponent1.classList.remove('searchFormHidden');
+
+   /* controlComponent1.classList.remove('searchFormHidden');
     controlComponent1.classList.add('searchFormVisible');
     controlComponent2.classList.remove('searchFormHidden');
-    controlComponent2.classList.add('searchFormVisible');
+    controlComponent2.classList.add('searchFormVisible'); */
+
+    controlComponent1.classList.remove('addNewElementFormHidden');
+    controlComponent1.classList.add('addNewElementFormVisible');
+    controlComponent2.classList.remove('addNewElementFormHidden');
+    controlComponent2.classList.add('addNewElementFormVisible');
 };
+
 
 function setEventsHiddenButtons(controlComponent) {
     for (var i = 0; i < controlComponent.childNodes.length; ++i) {
@@ -331,6 +338,7 @@ function addNote() {
     noteTitleBox.value = "";
     noteTextBox.value = "";
 };
+    
 
 function appendImage(component, imageLocation){
     var viewImage = document.createElement("img");
@@ -344,8 +352,12 @@ function appendImage(component, imageLocation){
     
 };
 
+
 function showNote(component){
-    var noteContent = getNoteContent(component);//Get the note content
+    //console.log('El componente es:!!!' + component);
+    var noteInformation = component.parentNode;
+    var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
+
     noteContent.classList.remove('hideComponent');
     noteContent.classList.add('showComponent');
 }; 
@@ -355,11 +367,13 @@ function editNote(component){
   
 };
 
-function getNoteContent(component)
-{
+function getNoteContent(component){
     var noteInformation = component.parentNode;
     var noteContent = noteInformation.childNodes[3]; //Get the note content
     return noteContent;
-}
+};
 
+   
+
+    
 
