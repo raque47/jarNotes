@@ -5818,6 +5818,11 @@ button.close {
   background-color: #3fbd01;
   font-size: 16px; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .home {
   background-color: #3fbd01; }
 
@@ -5946,15 +5951,6 @@ button.close {
 
 .navBar__button:last-child {
   margin-left: 2rem; }
-
-.infoPanel {
-  background-color: transparent;
-  border: 0.2rem solid #DDD;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: stretch; }
 
 .navbar-brand {
   padding: 0px;
@@ -6116,5 +6112,43 @@ button.close {
   opacity: 0;
   transition: opacity 5s; }
 
+.infoPanel {
+  background-color: transparent;
+  height: 85vh;
+  border: 0.2rem solid #DDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+  padding-left: 1.8rem; }
+
 .infoPanelButtons {
   display: inline; }
+
+.container-fluid-fix {
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+textarea.form-control {
+  height: 60vh; }
+
+/* Media Queries */
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D;
+    /* Red */ } }
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E;
+    /* Yellow */ } }
+
+/* Desktop Styles */
+@media only screen and (max-width: 993px) {
+  body {
+    background-color: aquamarine;
+    /* Red */ } }
