@@ -38,14 +38,14 @@
                                 <button id="notesControl" class="navBar__button buttons"> <img src="../images/notes-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Notes"></button>
                                 <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes hiddenButtons">
                                     <button id="hiddenButtonSearchNote" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
-                                    <button id="hiddenButtonAddNote" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>
+                                    <!--                                    <button id="hiddenButtonAddNote" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>-->
                                     <button id="hiddenButtonViewNote" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Notes</span></button>
                                 </div>
                                 <button id="tagsControl" class="navBar__button buttons"><img src="../images/tag-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Tags"></button>
                                 <div id="hiddenControlTagsButtons" class="hiddenButtonsTag hiddenButtons">
                                     <button id="hiddenButtonSearchTag" class="hiddenButtons__button buttons "><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Tag</span></button>
                                     <button id="hiddenButtonAddTag" class="hiddenButtons__button buttons"><img src="../images/add-tag-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Tag</span></button>
-                                    <button id="hiddenButtonViewTag" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tags</span></button>
+                                    <!--                                    <button id="hiddenButtonViewTag" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tags</span></button>-->
                                 </div>
 
                                 <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Floders"></button>
@@ -53,7 +53,7 @@
                                 <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder hiddenButtons">
                                     <button id="hiddenButtonSearchFolder" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Folder</span></button>
                                     <button id="hiddenButtonAddFolder" class="hiddenButtons__button buttons"><img src="../images/add-folder-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Folder</span></button>
-                                    <button id="hiddenButtonViewFolder" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Folders</span></button>
+                                    <!--                                    <button id="hiddenButtonViewFolder" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Folders</span></button>-->
                                 </div>
                                 <button class="navBar__button buttons"><img src="../images/user-button.svg" class="navBar__images"></button>
                             </ul>
@@ -70,10 +70,10 @@
 
 
     </div>
-    <div class="container-fluid container-fluid-fix">
+    <div class="container-fluid container-fluid-fix ">
 
-        <div class="row edition">
-            <div class="col-md-1">
+        <div class="row edition secondContainer">
+            <div class="col-md-1 firstElement">
 
                 <nav class="editionBar__nav">
                     <button id="toggleBar" class="editionBar__button buttons"><img src="../images/menu-button.svg" class="navBar__images"></button>
@@ -84,13 +84,12 @@
                     <button class="editionBar__button buttons"><img src="../images/information.-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Note info</span></button>
 
                     <button class="editionBar__button buttons"><img src="../images/trash-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Delete Note</span></button>
-                    <button class="editionBar__button buttons"><img src="../images/trash-button.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Delete Note</span></button>
 
                     <button class="editionBar__button buttons"><img src="../images/share-links.svg" class="navBar__images"><span class="editionBar__span buttonFont hiddenControl">Copy Notelink</span></button>
 
                 </nav>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-11  col-xs-12 secondElement">
                 <div class="form-group noteText">
                     <input type="text" placeholder="Title" class="titleNoteControl" id="titleNote">
                     <textarea class="form-control" rows="5" id="noteContent" placeholder="Write a new note..."></textarea>
@@ -106,7 +105,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 hidden-md">
+
+
+            <div class="col-md-3 col-sm-11 col-xs-12 thirthElement">
                 <div class="infoPanel">
 
                     <!--                    <div class="container-fluid">-->
@@ -132,23 +133,29 @@
                     </div>
 
 
-                    <div id="addNewElementForm" class="form-group addNewElementPanel addNewElementFormHidden">
+                    <div id="addNewElementForm" class="addNewElementPanel addNewElementFormHidden">
+
                         <div class="addNewElementTittleType">
                             <h4 id="" class="fontFamily"> Add a new tag</h4>
                         </div>
 
-                        <input id="addNewElementTittle" type="text" placeholder="Title" class="titleNoteControl">
-                        <textarea id="addNewElementContent" class="form-control" rows="5" placeholder="Write a new note..."></textarea>
-                        <form action="" onsubmit="return addNote()">
-                            <button type="submit" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
-                        </form>
-                    </div>
-                    <!--
+
+
+                        <div class="formAddNewElement">
+                            <input id="addNewElementTittle" type="text" placeholder="Title" class="titleNoteControl">
+                            <textarea id="addNewElementContent" class="textAreaAddElement"></textarea>
+
+                            <button id="addNoteButton" class="editionButtonControls addNewElementButton"><span class="editionTextControl">Add Tag</span></button>
+                        </div>
+
+                        <!--
                     </div>
                     container-fluid
 -->
+                    </div>
+                    <!-- infoPanel End -->
+
                 </div>
-                <!-- infoPanel End -->
 
             </div>
 

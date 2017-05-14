@@ -6134,6 +6134,21 @@ button.close {
 textarea.form-control {
   height: 60vh; }
 
+.addNewElementTittleType {
+  padding: 1rem 0rem 0.8rem 0.8rem; }
+
+.textAreaAddElement {
+  width: 95%; }
+
+.formAddNewElement {
+  padding-left: 1rem; }
+
+.addNewElementButton {
+  margin: 0; }
+
+.contentPanel {
+  display: none; }
+
 /* Media Queries */
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
@@ -6145,10 +6160,47 @@ textarea.form-control {
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body {
     background-color: #F5CF8E;
-    /* Yellow */ } }
+    /* Yellow */ }
+  .editionBar__nav {
+    height: 55%; } }
 
-/* Desktop Styles */
-@media only screen and (max-width: 993px) {
-  body {
-    background-color: aquamarine;
-    /* Red */ } }
+/*Ipad Pro*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  textarea.form-control {
+    width: 100%; }
+  .editionBar__nav {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh; }
+  .noteText {
+    height: 40vh;
+    width: 100%; }
+  .infoPanel {
+    height: 30vh;
+    width: 100%; }
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center; }
+  .firstElement {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1.5rem; }
+  .secondElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 2.5rem; }
+  .thirthElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    width: 67%;
+    margin: 3rem; } }
