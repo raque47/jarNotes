@@ -6153,8 +6153,45 @@ textarea.form-control {
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   body {
-    background-color: #F09A9D;
-    /* Red */ } }
+    background-color: #F09A9D; }
+  textarea.form-control {
+    width: 100%; }
+  .editionBar__nav {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh; }
+  .noteText {
+    height: 30vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
+  .infoPanel {
+    height: 20vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center; }
+  .firstElement {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1.5rem; }
+  .secondElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 2.5rem; }
+  .thirthElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto; } }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -6189,17 +6226,14 @@ textarea.form-control {
     align-content: space-around;
     align-items: center; }
   .firstElement {
-    order: 0;
     flex: 0 1 auto;
     align-self: auto;
     margin: 1.5rem; }
   .secondElement {
-    order: 0;
     flex: 1 1 auto;
     align-self: auto;
     margin: 2.5rem; }
   .thirthElement {
-    order: 0;
     flex: 1 1 auto;
     align-self: auto;
     width: 67%;
