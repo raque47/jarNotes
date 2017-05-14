@@ -1,3 +1,4 @@
+//Global variables
 var notesButton = document.getElementById('notesControl');
 var hiddenNotesButton = document.getElementById('hiddenControlNotesButtons');
 
@@ -100,7 +101,9 @@ titleNote.addEventListener("keyup", function (event) {
 var addNoteButton = document.getElementById('addNoteButton');
 addNoteButton.addEventListener('click', function(){ addNote() } );
 
-function setSearchFormVisible(controlComponent1, controlComponent2 ) {
+function setSearchFormVisible(controlComponent1, controlComponent2){
+
+};
 
 
 function setInformationPanelTittle(component) {
@@ -137,7 +140,7 @@ function setInformationPanelTittle(component) {
             searchFormInput.classList.add('searchFormHidden');
             break;
     }
-}
+};
 
 
 
@@ -146,7 +149,7 @@ function setSearchFormVisible(controlComponent1, controlComponent2) {
     controlComponent1.classList.add('searchFormVisible');
     controlComponent2.classList.remove('searchFormHidden');
     controlComponent2.classList.add('searchFormVisible');
-}
+};
 
 function setEventsHiddenButtons(controlComponent) {
     for (var i = 0; i < controlComponent.childNodes.length; ++i) {
@@ -154,14 +157,14 @@ function setEventsHiddenButtons(controlComponent) {
             changeColorHiddenButtons(this);
         });
     }
-}
+};
 
 
 function changeColorHiddenButtons(controlComponent) {
     resetColorHiddenButtons();
     controlComponent.classList.remove('disableHiddenButton');
     controlComponent.classList.add('activeHiddenButton');
-}
+};
 
 function changeColorMenuButtons(controlComponent) {
     resetColorMenuButtons();
@@ -169,7 +172,7 @@ function changeColorMenuButtons(controlComponent) {
 
     controlComponent.classList.remove('disableHiddenButton');
     controlComponent.classList.add('activeHiddenButton');
-}
+};
 
 function resetColorMenuButtons() {
     notesButton.classList.remove('activeHiddenButton');
@@ -180,7 +183,7 @@ function resetColorMenuButtons() {
 
     folderButton.classList.remove('activeHiddenButton');
     folderButton.classList.add('disableHiddenButton');
-}
+};
 
 function resetColorHiddenButtons() {
     var hiddenButtons = document.getElementsByClassName('hiddenButtons__button');
@@ -188,7 +191,7 @@ function resetColorHiddenButtons() {
         hiddenButtons[i].classList.remove('activeHiddenButton');
         hiddenButtons[i].classList.add('disableHiddenButton');
     }
-}
+};
 
 function toggleControls(controlComponent) {
     resetControls();
@@ -203,7 +206,7 @@ function toggleControls(controlComponent) {
         controlComponent.classList.remove('activeControl');
         controlComponent.classList.add('hiddenControl');
     }
-}
+};
 
 function resetControls() {
     hiddenNotesButton.style.visibility = 'hidden';
@@ -214,7 +217,7 @@ function resetControls() {
 
     hiddenFoldersButton.style.visibility = 'hidden';
     hiddenFoldersButton.style.opacity = 0.2;
-}
+};
 
 
 /*Button's information about the notes, tags and folders*/
@@ -233,7 +236,7 @@ function resetControls() {
     hiddenFoldersButton.style.opacity = 0;
     hiddenFoldersButton.classList.remove('activeControl');
     hiddenFoldersButton.classList.add('hiddenControl');
-}
+};
 
 toggleBarElement = document.getElementById('toggleBar');
 toggleBarElement.addEventListener('click', toggleEditionBar);
@@ -329,8 +332,7 @@ function addNote() {
     noteTextBox.value = "";
 };
 
-function appendImage(component, imageLocation)
-{
+function appendImage(component, imageLocation){
     var viewImage = document.createElement("img");
     viewImage.alt = "View Note";
     viewImage.setAttribute('src', imageLocation);
@@ -343,27 +345,21 @@ function appendImage(component, imageLocation)
 };
 
 function showNote(component){
-    console.log('El componente es: !!!!' + component);
-    var noteInformation = component.parentNode;
-    var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
+    var noteContent = getNoteContent(component);//Get the note content
     noteContent.classList.remove('hideComponent');
-    //noteContent.classList.add('transitionShowNoteContent');
     noteContent.classList.add('showComponent');
- 
-    
-    console.log('Mostrar nota!!!!' + noteContent);
+}; 
 
-    /*  var noteTextBox = document.getElementById('noteContent');
-      var noteText = noteTextBox.value;
+function editNote(component){
+     var noteContent = getNoteContent(component);//Get the note content
+  
+};
 
-      document.querySelector('.panel-body').innerHTML = noteText;
-      noteTextBox.value = '';
-
-      var panelTitle = document.getElementById('panel1Title');
-      var title = document.getElementById('titleNote');
-
-      panelTitle.innerHTML = title.value;
-      title.value = ""; */
-} 
+function getNoteContent(component)
+{
+    var noteInformation = component.parentNode;
+    var noteContent = noteInformation.childNodes[3]; //Get the note content
+    return noteContent;
+}
 
 
