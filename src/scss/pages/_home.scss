@@ -5,7 +5,6 @@ cursive;
     padding: 0;
     box-sizing: border-box;
 }
-
 .root {
     font-size: 16px;
 }
@@ -14,12 +13,10 @@ cursive;
     border: none;
     display: block;
 }
-
 .navBar__images {
     width: 2rem;
     height: 2rem;
-  //  padding-right: 1.5rem;
-
+    //  padding-right: 1.5rem;
 }
 .navBar__hiddenImages {
     width: 1.5rem;
@@ -29,11 +26,10 @@ cursive;
     float: left;
     //margin-right: 10px;
 }
-
 .navbar-inverse {
-    background-color:  #F8F8F8;
+    background-color: #F8F8F8;
     border: none;
-  //  border-color: #090909;
+    //  border-color: #090909;
 }
 .navbar .navbar-nav {
     float: left;
@@ -144,7 +140,6 @@ cursive;
     margin-right: 0.2rem;
     display: inline-block;
 }
-
 .navbar-brand {
     padding: 0px;
     /* firefox bug fix */
@@ -291,15 +286,13 @@ cursive;
 .noteAddedTitle {
     font-family: $font-stack;
     font-size: 2rem;
-//    font-weight: bold;
+    //    font-weight: bold;
     margin-right: 1rem;
 }
-
 .listOfElements {
     list-style-type: none;
     font-size: 1.3rem;
     margin: 1.2rem 1rem 0rem 1.6rem;
-    
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -307,7 +300,6 @@ cursive;
     align-content: space-around;
     align-items: flex-start;
 }
-
 .hideComponent {
     display: none;
     opacity: 0;
@@ -366,23 +358,20 @@ textarea.form-control {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 400px)  and (max-width: 960px) {
+@media only screen and (max-width: 500px) {
     body {
-        background-color: #F09A9D;
+        //        background-color: #F09A9D;
     }
     textarea.form-control {
         width: 100%;
     }
-
     .navBar__button {
-    width: 4rem;
-    padding-bottom: 0;
-    height: 5rem;
-    margin-right: 0.2rem;
-    display: block;
+        width: 4rem;
+        padding-bottom: 0;
+        height: 5rem;
+        margin-right: 0.2rem;
+        display: block;
     }
-
-
     .editionBar__nav {
         display: block;
         display: flex;
@@ -399,8 +388,10 @@ textarea.form-control {
     .infoPanel {
         height: 20vh;
         width: 90%;
-        margin: 1.5rem 2rem 2rem 2rem;
+        //        margin: 1.5rem 2rem 2rem 2rem;
+        margin: 0 2rem 2rem 2rem;
         padding-left: 1rem;
+        //        margin-top: 0px;
     }
     .secondContainer {
         display: flex;
@@ -411,10 +402,11 @@ textarea.form-control {
         align-items: center;
     }
     .firstElement {
-        order: 0;
+        order: 1;
         flex: 0 1 auto;
         align-self: auto;
         margin: 1.5rem;
+        margin: 0;
     }
     .secondElement {
         order: 0;
@@ -423,40 +415,174 @@ textarea.form-control {
         margin: 2.5rem;
     }
     .thirthElement {
-        order: 0;
+        order: 2;
         flex: 1 1 auto;
         align-self: auto;
     }
-
-    .container-fluid{
+    .container-fluid {
         padding-left: 15px;
     }
-    h2, .h2 {
-        font-size: 2rem; 
+    h2,
+    .h2 {
+        font-size: 1.7rem;
     }
-    
     .listOfElements {
-        padding-left: 5rem;
+        padding-left: 1rem;
     }
     .noteAddedTitle {
-    font-size: 1.3rem;
+        font-size: 1.3rem;
+    }
+    .openMenu {
+        display: none;
+        visibility: hidden;
+    }
+    .navBar__images {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .editionBar__button {
+        display: block;
+        padding: 0.4rem 0.3rem 0.4rem 1.3rem;
+    }
+    .titleNoteControl:hover {
+        font-size: 2rem;
+        transition: font-size 1s;
+    }
+    .titleNoteControl:focus {
+        font-size: 2rem;
+    }
+    .titleNoteControl {
+        font-size: 1.2rem;
+    }
+    .input-group .form-control {
+        width: 60%;
+        margin-left: 2rem;
     }
 }
+//
+//
+//@media only screen and (max-width: 400px) and (max-width: 960px) {
+//    body {
+////        background-color: #F09A9D;
+//    }
+//    textarea.form-control {
+//        width: 100%;
+//    }
+//    .navBar__button {
+//        width: 4rem;
+//        padding-bottom: 0;
+//        height: 5rem;
+//        margin-right: 0.2rem;
+//        display: block;
+//    }
+//    .editionBar__nav {
+//        display: block;
+//        display: flex;
+//        flex-direction: row;
+//        justify-content: flex-start;
+//        align-items: center;
+//        height: 4vh;
+//    }
+//    .noteText {
+//        height: 30vh;
+//        width: 90%;
+//        margin: 1.5rem 2rem 2rem 2rem;
+//    }
+//    .infoPanel {
+//        height: 20vh;
+//        width: 90%;
+////        margin: 1.5rem 2rem 2rem 2rem;
+//        margin: 0 2rem 2rem 2rem;
+//        padding-left: 1rem;
+////        margin-top: 0px;
+//    }
+//    .secondContainer {
+//        display: flex;
+//        flex-direction: column;
+//        flex-wrap: wrap;
+//        justify-content: flex-start;
+//        align-content: space-around;
+//        align-items: center;
+//    }
+//    .firstElement {
+//        order: 1;
+//        flex: 0 1 auto;
+//        align-self: auto;
+//        margin: 1.5rem;
+//        margin: 0;
+//    }
+//    .secondElement {
+//        order: 0;
+//        flex: 1 1 auto;
+//        align-self: auto;
+//        margin: 2.5rem;
+//    }
+//    .thirthElement {
+//        order: 2;
+//        flex: 1 1 auto;
+//        align-self: auto;
+//    }
+//    .container-fluid {
+//        padding-left: 15px;
+//    }
+//    h2,
+//    .h2 {
+//        font-size: 1.7rem;
+//    }
+//    .listOfElements {
+//        padding-left: 1rem;
+//    }
+//    .noteAddedTitle {
+//        font-size: 1.3rem;
+//    }
+//    .openMenu {
+//        display: none;
+//         visibility: hidden;
+//    }
+//    .navBar__images {
+//        width: 1.6rem;
+//        height: 1.6rem;
+//    }
+//    .editionBar__button {
+//        display: block;
+//        padding: 0.4rem 0.3rem 0.4rem 1.3rem;
+//    }
+//    .titleNoteControl:hover {
+//        font-size: 2rem;
+//        transition: font-size 1s;
+//    }
+//    .titleNoteControl:focus {
+//        font-size: 2rem;
+//    }
+//    .titleNoteControl {
+//        font-size: 1.2rem;
+//    }
+//}
 
 /* Tablet Styles */
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 600) and (max-width: 960px) {
     body {
-        background-color: #F5CF8E;
+        background-color: red;
         /* Yellow */
     }
     .editionBar__nav {
         height: 55%;
     }
-
+    /*    .titleNoteControl:hover {
+    font-size: 2rem;
+    transition: font-size 1s;
+}
+.titleNoteControl:focus {
+    font-size: 2rem;
+}
+    .titleNoteControl {
+    font-size: 1.2rem;
+}*/
 }
 
 /*Ipad Pro*/
+
 
 /*@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
     textarea.form-control {

@@ -340,6 +340,7 @@ function addNote() {
     
 
 function appendImage(component, imageLocation){
+
     var viewImage = document.createElement("img");
     viewImage.alt = "View Note";
     viewImage.setAttribute('src', imageLocation);
