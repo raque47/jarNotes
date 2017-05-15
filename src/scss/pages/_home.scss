@@ -5,28 +5,35 @@ cursive;
     padding: 0;
     box-sizing: border-box;
 }
-// Home specific styles
-.home {
-    background-color: $brand-color;
-}
+
 .root {
     font-size: 16px;
 }
 .buttons {
     background-color: transparent;
     border: none;
+    display: block;
 }
+
 .navBar__images {
-    width: 2vw;
-    height: 4vh;
+    width: 2rem;
+    height: 2rem;
+  //  padding-right: 1.5rem;
+
 }
 .navBar__hiddenImages {
     width: 1.5rem;
-    height: 3.5rem;
+    height: 2.5rem;
 }
 .navbar .container-fluid>.navbar-header {
     float: left;
-    margin-right: 10px;
+    //margin-right: 10px;
+}
+
+.navbar-inverse {
+    background-color:  #F8F8F8;
+    border: none;
+  //  border-color: #090909;
 }
 .navbar .navbar-nav {
     float: left;
@@ -63,7 +70,6 @@ cursive;
 }
 .editionBar__button {
     display: block;
-    // padding: 2rem 2rem 0rem 2rem;
     padding: 1rem 2rem 1rem 2rem;
 }
 .buttons:hover {
@@ -132,13 +138,13 @@ cursive;
     display: inline-block;
 }
 .navBar__button {
-    width: 4vw;
+    width: 4rem;
     padding-bottom: 0;
     height: 5rem;
+    margin-right: 0.2rem;
+    display: inline-block;
 }
-.navBar__button:last-child {
-    margin-left: 2rem;
-}
+
 .navbar-brand {
     padding: 0px;
     /* firefox bug fix */
@@ -352,6 +358,16 @@ textarea.form-control {
     textarea.form-control {
         width: 100%;
     }
+
+    .navBar__button {
+    width: 4rem;
+    padding-bottom: 0;
+    height: 5rem;
+    margin-right: 0.2rem;
+    display: block;
+}
+
+
     .editionBar__nav {
         display: block;
         display: flex;
@@ -395,6 +411,8 @@ textarea.form-control {
         flex: 1 1 auto;
         align-self: auto;
     }
+
+    
 }
 
 /* Tablet Styles */
@@ -407,11 +425,12 @@ textarea.form-control {
     .editionBar__nav {
         height: 55%;
     }
+
 }
 
 /*Ipad Pro*/
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+/*@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
     textarea.form-control {
         width: 100%;
     }
@@ -455,4 +474,4 @@ textarea.form-control {
         width: 67%;
         margin: 3rem;
     }
-}
+} */

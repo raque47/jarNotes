@@ -6,7 +6,7 @@
   "scripts": {
     "server": "http-server ./dist",
     "presass": "cp ./src/index.html ./dist/",
-    "sass": "node-sass ./src/scss/main.scss --include-path ./src/scss/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/  && cp -r ./node_modules/bootstrap-sass/assets/javascripts/ ./dist/js/ && cp ./node_modules/jquery/dist/jquery.min.js ./dist/jquery",
+    "sass": "node-sass ./src/scss/main.scss --include-path ./src/scss/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/  && cp -r ./node_modules/bootstrap-sass/assets/javascripts/ ./dist/js/  && cp ./node_modules/jquery/dist/jquery.min.js ./dist/jquery",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Larissa Arroyo Castillo - Raquel Chavarria Robles",

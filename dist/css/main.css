@@ -5823,27 +5823,28 @@ button.close {
   padding: 0;
   box-sizing: border-box; }
 
-.home {
-  background-color: #3fbd01; }
-
 .root {
   font-size: 16px; }
 
 .buttons {
   background-color: transparent;
-  border: none; }
+  border: none;
+  display: block; }
 
 .navBar__images {
-  width: 2vw;
-  height: 4vh; }
+  width: 2rem;
+  height: 2rem; }
 
 .navBar__hiddenImages {
   width: 1.5rem;
-  height: 3.5rem; }
+  height: 2.5rem; }
 
 .navbar .container-fluid > .navbar-header {
-  float: left;
-  margin-right: 10px; }
+  float: left; }
+
+.navbar-inverse {
+  background-color: #F8F8F8;
+  border: none; }
 
 .navbar .navbar-nav {
   float: left;
@@ -5945,12 +5946,11 @@ button.close {
   display: inline-block; }
 
 .navBar__button {
-  width: 4vw;
+  width: 4rem;
   padding-bottom: 0;
-  height: 5rem; }
-
-.navBar__button:last-child {
-  margin-left: 2rem; }
+  height: 5rem;
+  margin-right: 0.2rem;
+  display: inline-block; }
 
 .navbar-brand {
   padding: 0px;
@@ -6156,6 +6156,12 @@ textarea.form-control {
     background-color: #F09A9D; }
   textarea.form-control {
     width: 100%; }
+  .navBar__button {
+    width: 4rem;
+    padding-bottom: 0;
+    height: 5rem;
+    margin-right: 0.2rem;
+    display: block; }
   .editionBar__nav {
     display: block;
     display: flex;
@@ -6202,39 +6208,48 @@ textarea.form-control {
     height: 55%; } }
 
 /*Ipad Pro*/
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-  textarea.form-control {
-    width: 100%; }
-  .editionBar__nav {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: 4vh; }
-  .noteText {
-    height: 40vh;
-    width: 100%; }
-  .infoPanel {
-    height: 30vh;
-    width: 100%; }
-  .secondContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-around;
-    align-items: center; }
-  .firstElement {
-    flex: 0 1 auto;
-    align-self: auto;
-    margin: 1.5rem; }
-  .secondElement {
-    flex: 1 1 auto;
-    align-self: auto;
-    margin: 2.5rem; }
-  .thirthElement {
-    flex: 1 1 auto;
-    align-self: auto;
-    width: 67%;
-    margin: 3rem; } }
+/*@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+    textarea.form-control {
+        width: 100%;
+    }
+    .editionBar__nav {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 4vh;
+    }
+    .noteText {
+        height: 40vh;
+        width: 100%;
+    }
+    .infoPanel {
+        height: 30vh;
+        width: 100%;
+    }
+    .secondContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: space-around;
+        align-items: center;
+    }
+    .firstElement {
+        flex: 0 1 auto;
+        align-self: auto;
+        margin: 1.5rem;
+    }
+    .secondElement {
+        flex: 1 1 auto;
+        align-self: auto;
+        margin: 2.5rem;
+    }
+    .thirthElement {
+        flex: 1 1 auto;
+        align-self: auto;
+        width: 67%;
+        margin: 3rem;
+    }
+} */

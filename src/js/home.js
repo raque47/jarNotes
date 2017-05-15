@@ -17,7 +17,6 @@ notesButton.addEventListener('mouseover', function () {
 });
 
 
-
 var tagButton = document.getElementById('tagsControl');
 var hiddenTagsButton = document.getElementById('hiddenControlTagsButtons');
 tagButton.addEventListener('click', function () {
@@ -372,8 +371,3 @@ function getNoteContent(component){
     var noteContent = noteInformation.childNodes[3]; //Get the note content
     return noteContent;
 };
-
-   
-
-    
-
