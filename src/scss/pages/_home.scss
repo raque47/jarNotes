@@ -400,6 +400,7 @@ textarea.form-control {
         height: 20vh;
         width: 90%;
         margin: 1.5rem 2rem 2rem 2rem;
+        padding-left: 1rem;
     }
     .secondContainer {
         display: flex;
@@ -432,6 +433,13 @@ textarea.form-control {
     }
     h2, .h2 {
         font-size: 2rem; 
+    }
+    
+    .listOfElements {
+        padding-left: 5rem;
+    }
+    .noteAddedTitle {
+    font-size: 1.3rem;
     }
 }
 
