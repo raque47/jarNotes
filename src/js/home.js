@@ -199,7 +199,27 @@ function resetColorHiddenButtons() {
     }
 };
 
-function toggleControls(controlComponent) {
+
+
+/*Button's information about the notes, tags and folders*/
+function resetControls() {
+    hiddenNotesButton.classList.remove('activeControl');
+    hiddenNotesButton.classList.remove('visibleComponent');
+    hiddenNotesButton.classList.add('invisibleComponent');
+    hiddenNotesButton.classList.add('hiddenControl');
+
+    hiddenTagsButton.classList.remove('activeControl');
+    hiddenTagsButton.classList.remove('visibleComponent');
+    hiddenTagsButton.classList.add('invisibleComponent');
+    hiddenTagsButton.classList.add('hiddenControl');
+  
+    hiddenFoldersButton.classList.remove('activeControl');
+    hiddenFoldersButton.classList.remove('visibleComponent');
+    hiddenFoldersButton.classList.add('invisibleComponent');
+    hiddenFoldersButton.classList.add('hiddenControl');
+};  
+
+/*function toggleControls(controlComponent) {
     resetControls();
     if (controlComponent.style.visibility == 'hidden') {
         controlComponent.style.visibility = 'visible';
@@ -212,37 +232,25 @@ function toggleControls(controlComponent) {
         controlComponent.classList.remove('activeControl');
         controlComponent.classList.add('hiddenControl');
     }
-};
-
-function resetControls() {
-    hiddenNotesButton.style.visibility = 'hidden';
-    hiddenNotesButton.style.opacity = 0.2;
-
-    hiddenTagsButton.style.visibility = 'hidden';
-    hiddenTagsButton.style.opacity = 0.2;
-
-    hiddenFoldersButton.style.visibility = 'hidden';
-    hiddenFoldersButton.style.opacity = 0.2;
-};
+};  */
 
 
-/*Button's information about the notes, tags and folders*/
-function resetControls() {
-    hiddenNotesButton.style.visibility = "hidden";
-    hiddenNotesButton.style.opacity = 0;
-    hiddenNotesButton.classList.remove('activeControl');
-    hiddenNotesButton.classList.add('hiddenControl');
-
-    hiddenTagsButton.style.visibility = "hidden";
-    hiddenTagsButton.style.opacity = 0;
-    hiddenTagsButton.classList.remove('activeControl');
-    hiddenTagsButton.classList.add('hiddenControl');
-
-    hiddenFoldersButton.style.visibility = "hidden";
-    hiddenFoldersButton.style.opacity = 0;
-    hiddenFoldersButton.classList.remove('activeControl');
-    hiddenFoldersButton.classList.add('hiddenControl');
-};
+function toggleControls(controlComponent) {
+    resetControls();
+    if (controlComponent.classList.contains('invisibleComponent')) {
+        controlComponent.classList.remove('invisibleComponent');
+        controlComponent.classList.add('visibleComponent');
+        controlComponent.classList.remove('hiddenControl');
+        controlComponent.classList.add('activeControl');
+      
+    } else {
+        controlComponent.classList.remove('visibleComponent');
+        controlComponent.classList.add('invisibleComponent');
+        controlComponent.classList.remove('activeControl');
+        controlComponent.classList.add('hiddenControl');
+       
+    }
+}; 
 
 toggleBarElement = document.getElementById('toggleBar');
 toggleBarElement.addEventListener('click', toggleEditionBar);
@@ -252,15 +260,13 @@ function toggleEditionBar() {
     editionBarTexts = document.getElementsByClassName('editionBar__span');
     for (var i = 0; i < editionBarTexts.length; ++i) {
         if (toggleBarElement.classList.contains('active')) {
-            editionBarTexts[i].style.visibility = "hidden";
-            editionBarTexts[i].style.opacity = 0;
             editionBarTexts[i].classList.remove('activeControl');
             editionBarTexts[i].classList.add('hiddenControl');
+             editionBarTexts[i].classList.add('invisibleComponent');
         } else {
-            editionBarTexts[i].style.visibility = "visible";
-            editionBarTexts[i].style.opacity = 1;
             editionBarTexts[i].classList.remove('hiddenControl');
             editionBarTexts[i].classList.add('activeControl');
+            editionBarTexts[i].classList.add('visibleComponent');
         }
     }
 
@@ -279,8 +285,6 @@ function setTitleNote(controlComponent) {
 
 function addNote() {
 
-    console.log('NOOOTAASS');
-
     var panelInformation = document.getElementById('listInformationPanel');
     panelInformation.classList.add('listOfElements');
     var noteTextBox = document.getElementById('noteContent');
@@ -288,6 +292,11 @@ function addNote() {
 
     var noteTitleBox = document.getElementById('titleNote');
     var noteTitle =  noteTitleBox.value;
+
+    if(noteTitle == "")
+    {
+        noteTitle = "No Title"
+    }
 
     //Create the item from the notes
     var notePanel = document.createElement('li');
@@ -298,7 +307,7 @@ function addNote() {
     titleArea.appendChild(noteTitleNode);
     titleArea.classList.add('noteAddedTitle');
     notePanel.appendChild(titleArea);
-  
+
 
     //Create the buttons for the note control
     var imageViewButton = document.createElement("button");
@@ -306,23 +315,22 @@ function addNote() {
     imageViewButton = appendImage(imageViewButton, imageLocation); 
     imageViewButton.classList.add('buttons');
     imageViewButton.classList.add('infoPanelButtons');
-    imageViewButton.setAttribute('id', 'viewNote');
     imageViewButton.setAttribute('onclick', 'showNote(this)' );
     notePanel.appendChild(imageViewButton);
+
 
     imageViewButton =  document.createElement("button");
     imageLocation = '../images/edit-button.svg';
     imageViewButton = appendImage(imageViewButton, imageLocation); 
     imageViewButton.classList.add('buttons');
     imageViewButton.classList.add('infoPanelButtons');
-    imageViewButton.setAttribute('id', 'editNote');
     imageViewButton.setAttribute('onclick', 'editNote(this)');
     notePanel.appendChild(imageViewButton);
-
 
     //Create the content of the note
     var textArea = document.createElement('p');
     textArea.classList.add('hideComponent');
+    textArea.classList.add('noteContentFont');
     var noteContentNode = document.createTextNode(noteText);
     textArea.appendChild(noteContentNode);
     notePanel.appendChild(textArea);
@@ -351,23 +359,45 @@ function appendImage(component, imageLocation){
     
 };
 
-
 function showNote(component){
-    //console.log('El componente es:!!!' + component);
     var noteInformation = component.parentNode;
     var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
 
-    noteContent.classList.remove('hideComponent');
-    noteContent.classList.add('showComponent');
+    if(noteContent.classList.contains('hideComponent'))
+    {
+        noteContent.classList.remove('hideComponent');
+        noteContent.classList.add('showComponent');
+        noteContent.classList.add('outLineShowNote');
+    }
+    else
+    {
+        noteContent.classList.remove('showComponent');
+        noteContent.classList.remove('outLineShowNote');
+        noteContent.classList.add('hideComponent');    
+    }   
 }; 
 
 function editNote(component){
-     var noteContent = getNoteContent(component);//Get the note content
-  
+    var noteContent = getNoteContent(component);//Get the note content
+    var noteTextBox = document.getElementById('noteContent'); //Get the textbox to edit the note
+    noteTextBox.value = noteContent ;
+
+    var noteTitle = getTitleNote(component); //Get the title of the note
+    var noteTitleBox = document.getElementById('titleNote'); //Get the textbox to edit the title
+    noteTitleBox.value = noteTitle;
+
+    noteTextBox.focus(); //Focus the text area edition of the note
 };
 
 function getNoteContent(component){
     var noteInformation = component.parentNode;
-    var noteContent = noteInformation.childNodes[3]; //Get the note content
+    var noteContent = noteInformation.childNodes[3].innerHTML; //Get the note content
     return noteContent;
 };
+
+function getTitleNote(component){
+    var noteInformation = component.parentNode;
+    var noteTitle = noteInformation.childNodes[0].innerHTML; //Get the note title
+    return noteTitle;
+};
+

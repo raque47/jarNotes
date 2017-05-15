@@ -5915,8 +5915,6 @@ button.close {
 
 .hiddenButtons {
   background-color: #F8F8F8;
-  opacity: 0.2;
-  visibility: hidden;
   display: none;
   height: 5vh;
   transition: opacity 1s;
@@ -5957,6 +5955,10 @@ button.close {
   /* firefox bug fix */ }
 
 .navbar-brand > img {
+  /* height: 40vh;
+    width: 40vw;
+    padding: 15px;
+    position: absolute; */
   height: 40rem;
   padding: 15px;
   /* firefox bug fix */
@@ -6007,7 +6009,8 @@ button.close {
   outline: none;
   color: #FF7138;
   font-family: "Love Ya Like A Sister", cursive;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  align-self: stretch; }
 
 .noteText {
   display: flex;
@@ -6082,6 +6085,14 @@ button.close {
   height: 3.5rem;
   padding-bottom: 1.5rem; }
 
+.noteContentFont {
+  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Fanwood Text', serif;
+  font-size: 2rem; }
+
+.outLineShowNote {
+  outline: #2BC382 dotted 0.2rem; }
+
 .notesBackground {
   /*  border: 0.2rem solid gray;
     max-height: 20vh; 
@@ -6102,13 +6113,12 @@ button.close {
 .listOfElements {
   list-style-type: none;
   font-size: 1.3rem;
-  margin: 1.2rem 1rem 0rem 1.6rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: space-around;
-  align-items: flex-start; }
+  /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: flex-start; */ }
 
 .hideComponent {
   display: none;
@@ -6122,6 +6132,14 @@ button.close {
   opacity: 0;
   transition: opacity 5s; }
 
+.invisibleComponent {
+  visibility: hidden;
+  opacity: 0; }
+
+.visibleComponent {
+  visibility: visible;
+  opacity: 1; }
+
 .infoPanel {
   background-color: transparent;
   height: 85vh;
@@ -6132,7 +6150,8 @@ button.close {
   align-items: flex-start;
   align-content: stretch;
   padding-left: 1.8rem;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: scroll; }
 
 .infoPanelButtons {
   display: inline; }
@@ -6215,9 +6234,11 @@ textarea.form-control {
   h2, .h2 {
     font-size: 2rem; }
   .listOfElements {
-    padding-left: 5rem; }
+    padding-left: 1rem; }
   .noteAddedTitle {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+  .navbar-brand > img {
+    display: none; } }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -6273,3 +6294,5 @@ textarea.form-control {
         margin: 3rem;
     }
 } */
+.listInformationPanel {
+  display: block; }

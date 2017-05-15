@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" href="css/main.css"> !-->
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text|Yantramanav" rel="stylesheet">
 
 </head>
 
@@ -26,26 +27,27 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand pull-left" href="#"><img src="../images/logo.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="nav navbar-nav navbar-right">
                     <button id="notesControl" class="navBar__button buttons"> <img src="../images/notes-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Notes"></button>
-                    <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes hiddenButtons">
+                    <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes invisibleComponent hiddenButtons">
                         <button id="hiddenButtonSearchNote" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
                         <!--                                    <button id="hiddenButtonAddNote" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>-->
                         <button id="hiddenButtonViewNote" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Notes</span></button>
                     </div>
                     <button id="tagsControl" class="navBar__button buttons"><img src="../images/tag-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Tags"></button>
-                    <div id="hiddenControlTagsButtons" class="hiddenButtonsTag hiddenButtons">
+                    <div id="hiddenControlTagsButtons" class="hiddenButtonsTag invisibleComponent hiddenButtons">
                         <button id="hiddenButtonSearchTag" class="hiddenButtons__button buttons "><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Tag</span></button>
                         <button id="hiddenButtonAddTag" class="hiddenButtons__button buttons"><img src="../images/add-tag-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Tag</span></button>
                         <!--                                    <button id="hiddenButtonViewTag" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tags</span></button>-->
                     </div>
 
-                    <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Floders"></button>
+                    <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Folders"></button>
 
-                    <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder hiddenButtons">
+                    <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder invisibleComponent  hiddenButtons">
                         <button id="hiddenButtonSearchFolder" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Folder</span></button>
                         <button id="hiddenButtonAddFolder" class="hiddenButtons__button buttons"><img src="../images/add-folder-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Folder</span></button>
                         <!--                                    <button id="hiddenButtonViewFolder" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Folders</span></button>-->
@@ -83,11 +85,11 @@
             <div class="col-md-8 col-sm-11  col-xs-12 secondElement">
                 <div class="form-group noteText">
                     <input type="text" placeholder="Title" class="titleNoteControl" id="titleNote">
-                    <textarea class="form-control" rows="5" id="noteContent" placeholder="Write a new note..."></textarea>
+                    <textarea class="form-control noteContentFont" rows="5" id="noteContent" placeholder="Write a new note..."></textarea>
                     <div class="editionNotesControl">
-                        <button class="editionButtonControls"><img src="../images/paint-button.svg" class="navBar__images"></button>
-                        <button class="editionButtonControls"><img src="../images/upload-button.svg" class="navBar__images"></button>
-                        <button id="addNoteButton" class="editionButtonControls"><span class="editionTextControl">Add Note</span></button>
+                        <button class="editionButtonControls"><img src="../images/paint-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Font Color"></button>
+                        <button class="editionButtonControls"><img src="../images/upload-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Load Image"></button>
+                        <button id="addNoteButton" class="editionButtonControls"><span class="editionTextControl" data-toggle="tooltip" data-placement="top" title="Add Note">Add Note</span></button>
                     </div>
                 </div>
             </div>
