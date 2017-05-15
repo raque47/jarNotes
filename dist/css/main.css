@@ -6097,8 +6097,18 @@ button.close {
 .noteAddedTitle {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 2rem;
-  font-weight: bold;
   margin-right: 1rem; }
+
+.listOfElements {
+  list-style-type: none;
+  font-size: 1.3rem;
+  margin: 1.2rem 1rem 0rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-around;
+  align-items: flex-start; }
 
 .hideComponent {
   display: none;
@@ -6121,7 +6131,8 @@ button.close {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: stretch;
-  padding-left: 1.8rem; }
+  padding-left: 1.8rem;
+  overflow-y: scroll; }
 
 .infoPanelButtons {
   display: inline; }
@@ -6151,7 +6162,7 @@ textarea.form-control {
 
 /* Media Queries */
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) and (max-width: 960px) {
   body {
     background-color: #F09A9D; }
   textarea.form-control {
@@ -6197,7 +6208,11 @@ textarea.form-control {
   .thirthElement {
     order: 0;
     flex: 1 1 auto;
-    align-self: auto; } }
+    align-self: auto; }
+  .container-fluid {
+    padding-left: 15px; }
+  h2, .h2 {
+    font-size: 2rem; } }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {

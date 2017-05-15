@@ -291,9 +291,23 @@ cursive;
 .noteAddedTitle {
     font-family: $font-stack;
     font-size: 2rem;
-    font-weight: bold;
+//    font-weight: bold;
     margin-right: 1rem;
 }
+
+.listOfElements {
+    list-style-type: none;
+    font-size: 1.3rem;
+    margin: 1.2rem 1rem 0rem 1.6rem;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: flex-start;
+}
+
 .hideComponent {
     display: none;
     opacity: 0;
@@ -316,6 +330,7 @@ cursive;
     align-items: flex-start;
     align-content: stretch;
     padding-left: 1.8rem;
+    overflow-y: scroll;
 }
 .infoPanelButtons {
     display: inline;
@@ -351,7 +366,7 @@ textarea.form-control {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px)  and (max-width: 960px) {
     body {
         background-color: #F09A9D;
     }
@@ -365,7 +380,7 @@ textarea.form-control {
     height: 5rem;
     margin-right: 0.2rem;
     display: block;
-}
+    }
 
 
     .editionBar__nav {
@@ -412,7 +427,12 @@ textarea.form-control {
         align-self: auto;
     }
 
-    
+    .container-fluid{
+        padding-left: 15px;
+    }
+    h2, .h2 {
+        font-size: 2rem; 
+    }
 }
 
 /* Tablet Styles */

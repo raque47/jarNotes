@@ -282,7 +282,7 @@ function addNote() {
     console.log('NOOOTAASS');
 
     var panelInformation = document.getElementById('listInformationPanel');
-
+    panelInformation.classList.add('listOfElements');
     var noteTextBox = document.getElementById('noteContent');
     var noteText = noteTextBox.value;
 
