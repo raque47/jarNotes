@@ -219,22 +219,6 @@ function resetControls() {
     hiddenFoldersButton.classList.add('hiddenControl');
 };  
 
-/*function toggleControls(controlComponent) {
-    resetControls();
-    if (controlComponent.style.visibility == 'hidden') {
-        controlComponent.style.visibility = 'visible';
-        controlComponent.style.opacity = 1;
-        controlComponent.classList.remove('hiddenControl');
-        controlComponent.classList.add('activeControl');
-    } else {
-        controlComponent.style.visibility = 'hidden';
-        controlComponent.style.opacity = 0.3;
-        controlComponent.classList.remove('activeControl');
-        controlComponent.classList.add('hiddenControl');
-    }
-};  */
-
-
 function toggleControls(controlComponent) {
     resetControls();
     if (controlComponent.classList.contains('invisibleComponent')) {
@@ -348,6 +332,7 @@ function addNote() {
     
 
 function appendImage(component, imageLocation){
+
     var viewImage = document.createElement("img");
     viewImage.alt = "View Note";
     viewImage.setAttribute('src', imageLocation);
