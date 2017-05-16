@@ -6138,7 +6138,6 @@ a:hover {
 a:active {
   color: black; }
 
-
 .hideComponent {
   display: none;
   opacity: 0; }
@@ -6196,7 +6195,7 @@ a:active {
   margin-left: auto; }
 
 textarea.form-control {
-  height: 60vh; }
+  height: 77vh; }
 
 .addNewElementTittleType {
   padding: 1rem 0rem 0.8rem 0.8rem; }
@@ -6213,6 +6212,12 @@ textarea.form-control {
 .contentPanel {
   display: none; }
 
+.navContainerNotes {
+  display: inline; }
+
+.navElementSpanVisible {
+  display: none;
+  visibility: hidden; }
 
 .addLightColorTransition {
   box-shadow: none; }
@@ -6224,14 +6229,7 @@ textarea.form-control {
 
 .listInformationPanel {
   display: block;
-}
-.navContainerNotes {
-  display: inline; }
-
-.navElementSpanVisible {
-  display: none;
-  visibility: hidden; }
-
+  margin-right: 1rem; }
 
 /* Media Queries */
 /* Mobile Styles */
@@ -6290,16 +6288,8 @@ textarea.form-control {
     margin: 1.5rem 2rem 2rem 2rem; }
   h2,
   .h2 {
-
     font-size: 2.1rem;
     font-weight: bold; }
-
- 
-  .listOfElements {
-    padding-left: 1rem; }
-  .noteAddedTitle {
-    font-size: 1.3rem; }
-
   .openMenu {
     display: none;
     visibility: hidden; }
@@ -6321,10 +6311,8 @@ textarea.form-control {
     margin-left: 2rem; }
   .navbar-brand > img {
     display: none; }
-
   .infoPanel {
-    height: 40vh; } 
-
+    height: 40vh; }
   .invisibleComponent,
   .hiddenButtons {
     visibility: visible;
@@ -6373,16 +6361,7 @@ textarea.form-control {
     display: inline;
     visibility: visible;
     font-family: "Love Ya Like A Sister", cursive;
-    font-size: 1.7rem; } 
-
-
-/* Tablet Styles */
-@media only screen and (min-width: 600) and (max-width: 960px) {
-  body {
-    background-color: red;
-    /* Yellow */ }
-  .editionBar__nav {
-    height: 55%; } }
+    font-size: 1.7rem; } }
 
 @media only screen and (max-width: 400px) and (max-width: 960px) {
   textarea.form-control {
@@ -6511,49 +6490,73 @@ textarea.form-control {
     font-family: "Love Ya Like A Sister", cursive;
     font-size: 1.7rem; } }
 
-/*Ipad Pro*/
-/*@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-    textarea.form-control {
-        width: 100%;
-    }
-    .editionBar__nav {
-        display: block;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: 4vh;
-    }
-    .noteText {
-        height: 40vh;
-        width: 100%;
-    }
-    .infoPanel {
-        height: 30vh;
-        width: 100%;
-    }
-    .secondContainer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: space-around;
-        align-items: center;
-    }
-    .firstElement {
-        flex: 0 1 auto;
-        align-self: auto;
-        margin: 1.5rem;
-    }
-    .secondElement {
-        flex: 1 1 auto;
-        align-self: auto;
-        margin: 2.5rem;
-    }
-    .thirthElement {
-        flex: 1 1 auto;
-        align-self: auto;
-        width: 67%;
-        margin: 3rem;
-    }
-} */
+@media only screen and (max-width: 750) {
+  .container-fluid {
+    padding-left: 15px; }
+  .openMenu {
+    display: none;
+    visibility: hidden; }
+  .navBar__images {
+    width: 1.5rem;
+    height: 2.5rem; }
+  .titleNoteControl:hover {
+    font-size: 2rem;
+    transition: font-size 1s; }
+  .titleNoteControl:focus {
+    font-size: 2rem; }
+  .titleNoteControl {
+    font-size: 1.2rem; }
+  .input-group .form-control {
+    width: 60%;
+    margin-left: 2rem; }
+  .navbar-brand > img {
+    display: none; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block; }
+  .navbar-header {
+    display: block; }
+  .navbar .container-fluid > .navbar-header {
+    float: none;
+    /* display: block; */ }
+  .navContainerNotes {
+    display: block;
+    border-color: #e7e7e7;
+    border: solid #e7e7e7;
+    width: 100%;
+    padding-bottom: 1rem; }
+  .navbar .navbar-nav {
+    float: left;
+    margin: 0;
+    width: 101%;
+    height: 100vh; }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    padding: 0; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    padding-left: 4.5rem; }
+  .navBar__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .hiddenButtons__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .buttonFontHidden {
+    font-size: 1.2rem; }
+  .navElementSpanVisible {
+    display: inline;
+    visibility: visible;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 1.7rem; } }
