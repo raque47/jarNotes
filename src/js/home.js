@@ -69,6 +69,7 @@ var addNewElementForm = document.getElementById('addNewElementForm');
 var hiddenButtonAddTag = document.getElementById('hiddenButtonAddTag');
 hiddenButtonAddTag.addEventListener('click', function () {
     setAddNewElementFormVisible(addNewElementForm);
+
 });
 
 //When the hidden button of add folder is clicked the form of add a new folder comes visisble 
@@ -78,14 +79,21 @@ hiddenButtonAddFolder.addEventListener('click', function () {
 });
 
 
-
-
-
 function setAddNewElementFormVisible(controlComponent) {
     controlComponent.classList.remove('addNewElementFormHidden');
     controlComponent.classList.add('addNewElementFormVisible');
+    var panel = document.getElementById('panelInformation');
+    panel.classList.remove('addLightColorTransition');
+    panel.classList.add('addDarkColorTransition');
+    setTimeout ( clearBorder(panel, 3000 ));
 
 };
+
+function clearBorder(component) {
+   //component.classList.remove('addDarkColorTransition');
+   component.classList.add('addLightColorTransition');
+}
+
 
 
 
@@ -269,8 +277,11 @@ function setTitleNote(controlComponent) {
 
 function addNote() {
 
+    console.log('estoy agregandoooo');
     var panelInformation = document.getElementById('listInformationPanel');
     panelInformation.classList.add('listOfElements');
+  
+  
     var noteTextBox = document.getElementById('noteContent');
     var noteText = noteTextBox.value;
 
@@ -284,6 +295,8 @@ function addNote() {
 
     //Create the item from the notes
     var notePanel = document.createElement('li');
+    notePanel.classList.add('infoPanelElements');
+    notePanel.classList.add('borderStyle');
 
     //Create the title of the note 
     var titleArea = document.createElement('span');
@@ -347,19 +360,18 @@ function appendImage(component, imageLocation){
 function showNote(component){
     var noteInformation = component.parentNode;
     var noteContent = noteInformation.childNodes[3]; //Se obtiene el contenido de la nota
+    noteContent.classList.add('showNoteAnimation');
 
     if(noteContent.classList.contains('hideComponent'))
-    {
+    {   
         noteContent.classList.remove('hideComponent');
         noteContent.classList.add('showComponent');
-        noteContent.classList.add('outLineShowNote');
     }
     else
     {
         noteContent.classList.remove('showComponent');
-        noteContent.classList.remove('outLineShowNote');
-        noteContent.classList.add('hideComponent');    
-    }   
+        noteContent.classList.add('hideComponent');       
+    }    
 }; 
 
 function editNote(component){
@@ -372,7 +384,36 @@ function editNote(component){
     noteTitleBox.value = noteTitle;
 
     noteTextBox.focus(); //Focus the text area edition of the note
+
+    //Remove the listener of add note from the save button
+    addNoteButton.removeEventListener('click', function(){ addNote() } );
+
+    //Add the listener to the save button in order to save note, instead of add note
+    addNoteButton.addEventListener('click', function(){ saveNote(component) } );
 };
+
+function saveNote(component)
+{
+    setTitleNote(component);  //Update the title 
+    setNoteContent(component); //Update the note content
+
+    //Remove the listener of save note from the save button
+    addNoteButton.removeEventListener('click', function(){ saveNote(component) } );
+
+ //   addNoteButton.addEventListener('click', function(){ addNote() } );
+
+}
+
+function getTitleNote(component){
+    var noteInformation = component.parentNode;
+    var noteTitle = noteInformation.childNodes[0].innerHTML; //Get the note title
+    return noteTitle;
+};
+
+function setTitleNote(component){
+     var noteInformation = component.parentNode;
+     noteInformation.childNodes[0].innerHTML = 'adios'; //Get the note title
+}
 
 function getNoteContent(component){
     var noteInformation = component.parentNode;
@@ -380,9 +421,12 @@ function getNoteContent(component){
     return noteContent;
 };
 
-function getTitleNote(component){
+function setNoteContent(component){
     var noteInformation = component.parentNode;
-    var noteTitle = noteInformation.childNodes[0].innerHTML; //Get the note title
-    return noteTitle;
-};
+    noteInformation.childNodes[3].innerHTML = 'HOLA';
+}
+
+
+
+
 

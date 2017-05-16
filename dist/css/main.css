@@ -5832,8 +5832,8 @@ button.close {
   display: block; }
 
 .navBar__images {
-  width: 2rem;
-  height: 2rem; }
+  width: 2.3rem;
+  height: 2.3rem; }
 
 .navBar__hiddenImages {
   width: 1.5rem;
@@ -6009,7 +6009,7 @@ button.close {
   outline: none;
   color: #FF7138;
   font-family: "Love Ya Like A Sister", cursive;
-  font-size: 1.8rem;
+  font-size: 2rem;
   align-self: stretch; }
 
 .noteText {
@@ -6090,8 +6090,21 @@ button.close {
   font-family: 'Fanwood Text', serif;
   font-size: 2rem; }
 
-.outLineShowNote {
-  outline: #2BC382 dotted 0.2rem; }
+.showNoteAnimation {
+  background-color: white;
+  margin-bottom: 0rem;
+  max-height: 25vh;
+  overflow: auto;
+  margin-right: 0rem;
+  margin-top: 0.9rem;
+  animation: fade 1s;
+  border-top: 0.2rem solid #E7E7E7; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .notesBackground {
   /*  border: 0.2rem solid gray;
@@ -6107,18 +6120,23 @@ button.close {
 
 .noteAddedTitle {
   font-family: "Love Ya Like A Sister", cursive;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-right: 1rem; }
 
 .listOfElements {
-  list-style-type: none;
-  font-size: 1.3rem;
-  /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-around;
-    align-items: flex-start; */ }
+  font-size: 1.3rem; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+a:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+a:active {
+  color: black; }
 
 .hideComponent {
   display: none;
@@ -6154,7 +6172,23 @@ button.close {
   overflow-x: scroll; }
 
 .infoPanelButtons {
-  display: inline; }
+  display: inline;
+  padding: 0.5rem; }
+
+.infoPanelElements {
+  align-self: stretch;
+  margin-right: 1rem; }
+
+.bulletImage {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0rem; }
+
+.borderStyle {
+  background: #F8F8F8;
+  margin-bottom: 1rem;
+  border: 0.2rem solid #E7E7E7; }
 
 .container-fluid-fix {
   padding-right: 15px;
@@ -6179,6 +6213,18 @@ textarea.form-control {
 .contentPanel {
   display: none; }
 
+.addLightColorTransition {
+  box-shadow: none; }
+
+.addDarkColorTransition {
+  border-color: #ccc;
+  box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.075), 0 0 16px #f2bc86;
+  transition: box-shadow 0.5s ease-in; }
+
+.listInformationPanel {
+  display: block;
+  margin-right: 1rem; }
+
 /* Media Queries */
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
@@ -6197,10 +6243,6 @@ textarea.form-control {
     justify-content: flex-start;
     align-items: center;
     height: 4vh; }
-  .noteText {
-    height: 30vh;
-    width: 90%;
-    margin: 1.5rem 2rem 2rem 2rem; }
   .infoPanel {
     height: 20vh;
     width: 90%;
@@ -6223,24 +6265,25 @@ textarea.form-control {
     order: 0;
     flex: 1 1 auto;
     align-self: auto;
-    margin: 2.5rem; }
+    margin-bottom: 2rem; }
   .thirthElement {
     order: 2;
     flex: 1 1 auto;
     align-self: auto; }
   .container-fluid {
     padding-left: 15px; }
+  .noteAddedTitle {
+    font-size: 1.75rem; }
+  .noteContentFont {
+    font-size: 1.6rem; }
+  .noteText {
+    height: 30vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
   h2,
   .h2 {
-    font-size: 1.7rem; }
-  .listOfElements {
-    padding-left: 1rem; }
-  .noteAddedTitle {
-    font-size: 1.3rem; }
-
-  .navbar-brand > img {
-    display: none;  }
-
+    font-size: 2.1rem;
+    font-weight: bold; }
   .openMenu {
     display: none;
     visibility: hidden; }
@@ -6251,15 +6294,19 @@ textarea.form-control {
     display: block;
     padding: 0.4rem 0.3rem 0.4rem 1.3rem; }
   .titleNoteControl:hover {
-    font-size: 2rem;
+    font-size: 2.3rem;
     transition: font-size 1s; }
   .titleNoteControl:focus {
-    font-size: 2rem; }
+    font-size: 2.3rem; }
   .titleNoteControl {
-    font-size: 1.2rem; }
+    font-size: 1.5rem; }
   .input-group .form-control {
     width: 60%;
-    margin-left: 2rem; } }
+    margin-left: 2rem; }
+  .navbar-brand > img {
+    display: none; }
+  .infoPanel {
+    height: 40vh; } }
 
 /* Tablet Styles */
 @media only screen and (min-width: 600) and (max-width: 960px) {
@@ -6325,5 +6372,3 @@ textarea.form-control {
         margin: 3rem;
     }
 } */
-.listInformationPanel {
-  display: block; }

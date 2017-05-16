@@ -6,6 +6,7 @@ Rosado intermedio: #F5A9D0
 Naranja: #FF7138
 Turquesa: #2BC382
 Verde: #86EA34
+Verde claro: #D0F5A9
 Verde claro: #A9F5A9;
 
 
