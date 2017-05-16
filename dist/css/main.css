@@ -6112,13 +6112,7 @@ button.close {
 
 .listOfElements {
   list-style-type: none;
-  font-size: 1.3rem;
-  /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-around;
-    align-items: flex-start; */ }
+  font-size: 1.3rem; }
 
 .hideComponent {
   display: none;
@@ -6150,8 +6144,7 @@ button.close {
   align-items: flex-start;
   align-content: stretch;
   padding-left: 1.8rem;
-  overflow-y: scroll;
-  overflow-x: scroll; }
+  overflow: auto; }
 
 .infoPanelButtons {
   display: inline; }
@@ -6179,16 +6172,23 @@ textarea.form-control {
 .contentPanel {
   display: none; }
 
+.navContainerNotes {
+  display: inline; }
+
+.navElementSpanVisible {
+  display: none;
+  visibility: hidden; }
+
 /* Media Queries */
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
   textarea.form-control {
     width: 100%; }
-  .navBar__button {
-    width: 4rem;
-    padding-bottom: 0;
-    height: 5rem;
-    margin-right: 0.2rem;
+  .buttons {
+    margin-right: 0; }
+  .disableHiddenButton {
+    margin-right: 0; }
+  .navContainerNotes {
     display: block; }
   .editionBar__nav {
     display: block;
@@ -6237,16 +6237,12 @@ textarea.form-control {
     padding-left: 1rem; }
   .noteAddedTitle {
     font-size: 1.3rem; }
-
-  .navbar-brand > img {
-    display: none;  }
-
   .openMenu {
     display: none;
     visibility: hidden; }
   .navBar__images {
-    width: 1.6rem;
-    height: 1.6rem; }
+    width: 1.5rem;
+    height: 2.5rem; }
   .editionBar__button {
     display: block;
     padding: 0.4rem 0.3rem 0.4rem 1.3rem; }
@@ -6259,7 +6255,58 @@ textarea.form-control {
     font-size: 1.2rem; }
   .input-group .form-control {
     width: 60%;
-    margin-left: 2rem; } }
+    margin-left: 2rem; }
+  .navbar-brand > img {
+    display: none; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block; }
+  .navbar-header {
+    display: block; }
+  .navbar .container-fluid > .navbar-header {
+    float: none;
+    /* display: block; */ }
+  .navContainerNotes {
+    display: block;
+    border-color: #e7e7e7;
+    border: solid #e7e7e7;
+    width: 100%;
+    padding-bottom: 1rem; }
+  .navbar .navbar-nav {
+    float: left;
+    margin: 0;
+    width: 101%;
+    height: 100vh; }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    padding: 0; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    padding-left: 4.5rem; }
+  .navBar__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .hiddenButtons__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .buttonFontHidden {
+    font-size: 1.2rem; }
+  .navElementSpanVisible {
+    display: inline;
+    visibility: visible;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 1.7rem; } }
 
 /* Tablet Styles */
 @media only screen and (min-width: 600) and (max-width: 960px) {
@@ -6267,17 +6314,134 @@ textarea.form-control {
     background-color: red;
     /* Yellow */ }
   .editionBar__nav {
-    height: 55%; }
-  /*    .titleNoteControl:hover {
+    height: 55%; } }
+
+@media only screen and (max-width: 400px) and (max-width: 960px) {
+  textarea.form-control {
+    width: 100%; }
+  .buttons {
+    margin-right: 0; }
+  .disableHiddenButton {
+    margin-right: 0; }
+  .navContainerNotes {
+    display: block; }
+  .editionBar__nav {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh; }
+  .noteText {
+    height: 30vh;
+    width: 90%;
+    margin: 1.5rem 2rem 2rem 2rem; }
+  .infoPanel {
+    height: 20vh;
+    width: 90%;
+    margin: 0 2rem 2rem 2rem;
+    padding-left: 1rem; }
+  .secondContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center; }
+  .firstElement {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 1.5rem;
+    margin: 0; }
+  .secondElement {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    margin: 2.5rem; }
+  .thirthElement {
+    order: 2;
+    flex: 1 1 auto;
+    align-self: auto; }
+  .container-fluid {
+    padding-left: 15px; }
+  h2,
+  .h2 {
+    font-size: 1.7rem; }
+  .listOfElements {
+    padding-left: 1rem; }
+  .noteAddedTitle {
+    font-size: 1.3rem; }
+  .openMenu {
+    display: none;
+    visibility: hidden; }
+  .navBar__images {
+    width: 1.5rem;
+    height: 2.5rem; }
+  .editionBar__button {
+    display: block;
+    padding: 0.4rem 0.3rem 0.4rem 1.3rem; }
+  .titleNoteControl:hover {
     font-size: 2rem;
-    transition: font-size 1s;
-}
-.titleNoteControl:focus {
-    font-size: 2rem;
-}
-    .titleNoteControl {
-    font-size: 1.2rem;
-}*/ }
+    transition: font-size 1s; }
+  .titleNoteControl:focus {
+    font-size: 2rem; }
+  .titleNoteControl {
+    font-size: 1.2rem; }
+  .input-group .form-control {
+    width: 60%;
+    margin-left: 2rem; }
+  .navbar-brand > img {
+    display: none; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block; }
+  .navbar-header {
+    display: block; }
+  .navbar .container-fluid > .navbar-header {
+    float: none;
+    /* display: block; */ }
+  .navContainerNotes {
+    display: block;
+    border-color: #e7e7e7;
+    border: solid #e7e7e7;
+    width: 100%;
+    padding-bottom: 1rem; }
+  .navbar .navbar-nav {
+    float: left;
+    margin: 0;
+    width: 101%;
+    height: 100vh; }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    padding: 0; }
+  .invisibleComponent,
+  .hiddenButtons {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+    padding-left: 4.5rem; }
+  .navBar__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .hiddenButtons__button {
+    padding-bottom: 0.5rem;
+    padding-right: 20rem;
+    border-top: solid #e7e7e7;
+    border-bottom: solid #e7e7e7;
+    padding-left: 2rem; }
+  .buttonFontHidden {
+    font-size: 1.2rem; }
+  .navElementSpanVisible {
+    display: inline;
+    visibility: visible;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 1.7rem; } }
 
 /*Ipad Pro*/
 /*@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {

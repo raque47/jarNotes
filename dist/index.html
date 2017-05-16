@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <!--     <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JarNotes</title>
 
@@ -21,39 +21,43 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                    aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand pull-left" href="#"><img src="../images/logo.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="nav navbar-nav navbar-right">
-                    <button id="notesControl" class="navBar__button buttons"> <img src="../images/notes-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Notes"></button>
-                    <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes invisibleComponent hiddenButtons">
-                        <button id="hiddenButtonSearchNote" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
-                        <!--                                    <button id="hiddenButtonAddNote" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>-->
-                        <button id="hiddenButtonViewNote" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Notes</span></button>
+                    <div class="navContainerNotes">
+                        <button id="notesControl" class="navBar__button buttons"> <img src="../images/notes-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Notes"><span class="navElementSpanVisible">Notes</span></button>
+                        <div id="hiddenControlNotesButtons" class="hiddenButtonsNotes invisibleComponent hiddenButtons">
+                            <button id="hiddenButtonSearchNote" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Note</span></button>
+                            <!--                                    <button id="hiddenButtonAddNote" class="hiddenButtons__button buttons"><img src="../images/add-note-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Note</span></button>-->
+                            <button id="hiddenButtonViewNote" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Notes</span></button>
+                        </div>
                     </div>
-                    <button id="tagsControl" class="navBar__button buttons"><img src="../images/tag-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Tags"></button>
-                    <div id="hiddenControlTagsButtons" class="hiddenButtonsTag invisibleComponent hiddenButtons">
-                        <button id="hiddenButtonSearchTag" class="hiddenButtons__button buttons "><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Tag</span></button>
-                        <button id="hiddenButtonAddTag" class="hiddenButtons__button buttons"><img src="../images/add-tag-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Tag</span></button>
-                        <!--                                    <button id="hiddenButtonViewTag" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tags</span></button>-->
+                    <div class="navContainerNotes">
+                        <button id="tagsControl" class="navBar__button buttons"><img src="../images/tag-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Tags"><span class="navElementSpanVisible">Tags</span></button>
+                        <div id="hiddenControlTagsButtons" class="hiddenButtonsTag invisibleComponent hiddenButtons">
+                            <button id="hiddenButtonSearchTag" class="hiddenButtons__button buttons "><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Tag</span></button>
+                            <button id="hiddenButtonAddTag" class="hiddenButtons__button buttons"><img src="../images/add-tag-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Tag</span></button>
+                            <!--                                    <button id="hiddenButtonViewTag" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Tags</span></button>-->
+                        </div>
                     </div>
+                    <div class="navContainerNotes">
+                        <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Folders"><span class="navElementSpanVisible">Folders</span></button>
 
-                    <button id="foldersControl" class="navBar__button buttons"><img src="../images/folder-button.svg" class="navBar__images" data-toggle="tooltip" data-placement="top" title="Folders"></button>
-
-                    <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder invisibleComponent  hiddenButtons">
-                        <button id="hiddenButtonSearchFolder" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Folder</span></button>
-                        <button id="hiddenButtonAddFolder" class="hiddenButtons__button buttons"><img src="../images/add-folder-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Folder</span></button>
-                        <!--                                    <button id="hiddenButtonViewFolder" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Folders</span></button>-->
+                        <div id="hiddenControlFoldersButtons" class="hiddenButtonsFolder invisibleComponent  hiddenButtons">
+                            <button id="hiddenButtonSearchFolder" class="hiddenButtons__button buttons"><img src="../images/search-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Search Folder</span></button>
+                            <button id="hiddenButtonAddFolder" class="hiddenButtons__button buttons"><img src="../images/add-folder-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">Add Folder</span></button>
+                            <!--                                    <button id="hiddenButtonViewFolder" class="hiddenButtons__button buttons"><img src="../images/view-button.svg" class="navBar__hiddenImages"> <span class="buttonFontHidden">View Folders</span></button>-->
+                        </div>
                     </div>
-                    <button class="dropdown-toggle navBar__button buttons" data-toggle="dropdown"><img src="../images/user-button.svg" class="navBar__images"><span class="caret"></button>
+                    <button class="dropdown-toggle navBar__button buttons" data-toggle="dropdown"><img src="../images/user-button.svg" class="navBar__images"><span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Log Out</a></li>
